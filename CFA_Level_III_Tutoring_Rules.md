@@ -80,4 +80,4 @@
 
 保留必要的 CFA 英文术语。英文速记句只在能直接帮助概念辨析、方向判断或构造题作答时选择性加入；删除或改写只是重复公式、机械翻译中文或过于笼统的句子，不得为追求比例而扩写或制造非 CFA 公式与结论。
 
-Ethical and Professional Standards 是科目级例外：处理 Ethics 题时必须读取并更新 `CFA_Level_III_Ethics_Question_Notes.md`。该文档以 Code of Ethics、Standards I–VII 的具体准则为固定主框架；涉及 Asset Manager Code 时，以六项 General Principles 和六大行为领域组织。每道题解析后，将 case 与题号、关键行为、符合或违反的结论及依据用简短中文追加到相应准则下，保留官方英文名称、核心术语和决定结论的题干触发词；同一行为涉及多条准则时分别记录。不得按题号写成流水账、复制完整题解，或为单条准则和单题继续拆分文档。主知识笔记只保留高度可迁移的伦理概念辨析，并指向该专项笔记，不复制整套准则。
+Ethical and Professional Standards 是科目级例外：处理 Ethics 题时必须读取并更新 `CFA_Level_III_Ethics_Question_Notes.html`。该文档以 Code of Ethics、Standards I–VII 的具体准则为固定主框架；涉及 Asset Manager Code 时，以六项 General Principles 和六大行为领域组织。每道题解析后，将 case 与题号、关键行为、符合或违反的结论及依据用简短中文追加到相应准则下，保留官方英文名称、核心术语和决定结论的题干触发词；同一行为涉及多条准则时分别记录。不得按题号写成流水账、复制完整题解，或为单条准则和单题继续拆分文档。主知识笔记只保留高度可迁移的伦理概念辨析，并指向该专项笔记，不复制整套准则。

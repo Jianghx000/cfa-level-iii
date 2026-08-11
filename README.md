@@ -6,7 +6,7 @@ This repository contains concise, exam-oriented review notes organized under the
 
 - `CFA_Level_III_Knowledge_Notes.html` — knowledge notes organized under the nine Level III courses. Each entry places the tested point in its immediate decision framework, explains the essential relationships, and preserves key CFA terminology, formulas, and concise English recall statements.
 - `CFA_Level_III_Constructed_Response_Notes.html` — reusable constructed-response templates and scoring-oriented English sentences.
-- `CFA_Level_III_Ethics_Question_Notes.md` — Ethics question notes organized by the CFA Standards of Professional Conduct.
+- `CFA_Level_III_Ethics_Question_Notes.html` — Browser-friendly Ethics question notes organized by the CFA Standards of Professional Conduct.
 - `CFA_Level_III_Tutoring_Rules.md` — local tutoring and note-maintenance rules.
 
 The knowledge-note page uses the following course-level navigation:

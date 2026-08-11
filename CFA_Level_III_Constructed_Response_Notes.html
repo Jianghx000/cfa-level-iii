@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CFA Level III 主观题速答笔记</title>
+  <style>
+    :root {
+      --bg: #f4f6f2;
+      --panel: #ffffff;
+      --ink: #24313a;
+      --muted: #64736d;
+      --accent: #2f6b53;
+      --accent-soft: #e6f0e9;
+      --line: #d7e0da;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    aside {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 28px 22px;
+      background: #1f3d32;
+      color: #f4fbf7;
+    }
+
+    aside h1 {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+      line-height: 1.35;
+    }
+
+    aside p {
+      margin: 0 0 24px;
+      color: #c8d8d0;
+      font-size: 0.88rem;
+    }
+
+    nav details {
+      margin-bottom: 10px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    nav summary {
+      padding: 10px 12px;
+      cursor: pointer;
+      font-weight: 650;
+    }
+
+    nav a {
+      display: block;
+      padding: 7px 14px 10px 28px;
+      color: #e8f2ed;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover { color: #ffffff; text-decoration: underline; }
+
+    main {
+      width: min(980px, 100%);
+      padding: 46px 54px 80px;
+    }
+
+    .page-title {
+      margin-bottom: 28px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid var(--line);
+    }
+
+    .page-title h2 { margin: 0 0 6px; font-size: 2rem; }
+    .page-title p { margin: 0; color: var(--muted); }
+
+    article {
+      margin-bottom: 26px;
+      padding: 26px 28px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--panel);
+      box-shadow: 0 5px 18px rgba(31, 61, 50, 0.05);
+      scroll-margin-top: 22px;
+    }
+
+    article h3 { margin: 0 0 18px; color: var(--accent); }
+
+    .phrase {
+      margin: 14px 0;
+      padding: 15px 17px;
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      background: var(--accent-soft);
+    }
+
+    .phrase p { margin: 0; }
+    .phrase .english { font-weight: 650; }
+    .phrase .pattern { margin-top: 5px; color: var(--muted); font-size: 0.92rem; }
+
+    @media (max-width: 760px) {
+      .layout { display: block; }
+      aside { position: static; height: auto; }
+      main { padding: 30px 20px 60px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <h1>CFA Level III<br>主观题速答笔记</h1>
+      <p>简易得分答案与可复用英文句式</p>
+      <nav aria-label="页面目录">
+        <details open>
+          <summary>高频英文句式</summary>
+          <a href="#reasoning-phrases">机制、因果与比较</a>
+          <a href="#suitability-phrases">适配性与客户约束</a>
+        </details>
+      </nav>
+    </aside>
+
+    <main>
+      <header class="page-title">
+        <h2>主观题速答笔记</h2>
+        <p>只保留可以在考场中直接调用的简洁表达。</p>
+      </header>
+
+      <article id="reasoning-phrases">
+        <h3>机制、因果与比较</h3>
+
+        <div class="phrase">
+          <p class="english">This reflects a systematic process rather than discretionary judgment.</p>
+          <p class="pattern">句型：This reflects [A] rather than [B].</p>
+        </div>
+
+        <div class="phrase">
+          <p class="english">Higher reinvestment rates result in higher long-term earnings.</p>
+          <p class="pattern">句型：Higher [cause] results in higher/lower [effect].</p>
+        </div>
+
+        <div class="phrase">
+          <p class="english">Holdings-based analysis is less appropriate because quarter-end holdings may not represent exposures during the quarter.</p>
+          <p class="pattern">句型：[Method] is less appropriate because [limitation].</p>
+        </div>
+
+        <div class="phrase">
+          <p class="english">The yield on commercial paper will increase, while the fixed borrowing cost remains unchanged.</p>
+          <p class="pattern">句型：[A] will increase/decrease, while [B] remains unchanged.</p>
+        </div>
+      </article>
+
+      <article id="suitability-phrases">
+        <h3>适配性与客户约束</h3>
+
+        <div class="phrase">
+          <p class="english">The endowment model typically allocates a substantial portion of the portfolio to alternative investments and relies on active management.</p>
+          <p class="pattern">用途：概括 endowment model 的典型资产配置与管理方式。</p>
+        </div>
+
+        <div class="phrase">
+          <p class="english">This approach is inconsistent with the client’s preference for [preferred approach].</p>
+          <p class="pattern">用途：说明某项投资方法与客户明确偏好不一致。</p>
+        </div>
+
+        <div class="phrase">
+          <p class="english">[Investment] is often illiquid, whereas the client requires liquidity to meet [cash needs].</p>
+          <p class="pattern">用途：对比投资工具的流动性特征与客户的现金需求。</p>
+        </div>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

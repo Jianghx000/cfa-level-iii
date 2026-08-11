@@ -139,13 +139,6 @@
       letter-spacing: 0.035em;
       text-transform: uppercase;
     }
-    dt {
-      margin-top: 14px;
-      color: #536b62;
-      font-weight: 700;
-    }
-    dt:first-child { margin-top: 0; }
-    dd { margin: 4px 0 0; }
     .formula {
       margin: 8px 0;
       font-family: Cambria, "Times New Roman", serif;
@@ -281,78 +274,49 @@
 
   <main class="page-content" id="top">
   <h1>CFA Level III Knowledge Notes</h1>
-  <p class="scope-note">按九门 CFA Level III 课程分类，一级目录以下直接列具体知识点。每条正文先把具体考点放回其上位决策框架，再讲清最必要的内部关系、判断边界、公式与英文考试表述；不按题目出现顺序堆放，也不把临时上位主题固化为目录。</p>
+  <p class="scope-note">按九门 CFA Level III 课程分类，一级目录以下直接列具体知识点。每条正文先把具体考点放回其上位决策框架，再讲清最必要的内部关系、判断边界、公式与英文考试表述；正文按内容灵活组织，不机械套用固定字段，也不把临时上位主题固化为目录。</p>
 
   <article id="singer-terhaar" data-subject="资产配置">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Singer–Terhaar 模型</strong>用于估计国际股票市场的均衡风险溢价和预期收益率。模型的核心是：一国市场的定价取决于它与全球资本市场的一体化程度。</p>
+    <h2>Singer–Terhaar 模型</h2>
+        <p>该模型用于估计国际股票市场的均衡风险溢价和预期收益率。核心是：一国市场的定价取决于它与全球资本市场的一体化程度。</p>
         <p class="framework-note"><strong>上位框架：</strong>它属于资本市场预期（capital market expectations）中的国际权益预期收益估计。模型先区分完全一体化与完全分割两种定价边界，再用市场一体化程度连接二者。</p>
         <p>在完全一体化市场中，投资者能够在全球范围内分散风险，因此只有该国市场与全球市场共同变动的系统性风险获得补偿。在完全分割市场中，投资者无法进行充分的全球分散化，该国市场自身的总风险需要获得补偿。现实市场通常处于两者之间，因此以一体化程度对两种风险溢价进行加权。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">完全一体化风险溢价：RP<sub>i,int</sub> = ρ<sub>i,G</sub> × σ<sub>i</sub> × SR<sub>G</sub></div>
         <div class="formula">完全分割风险溢价：RP<sub>i,seg</sub> = σ<sub>i</sub> × SR<sub>i</sub></div>
         <div class="formula">部分一体化风险溢价：RP<sub>i</sub> = 一体化程度 × RP<sub>i,int</sub> + (1 − 一体化程度) × RP<sub>i,seg</sub></div>
         <div class="formula">预期收益率：E(R<sub>i</sub>) = R<sub>f</sub> + RP<sub>i</sub></div>
         <div>完全一体化使用全球市场 Sharpe ratio；完全分割使用本地市场 Sharpe ratio。</div>
         <p class="english-recall">Under full integration, only the market's covariance with the global market is priced; under segmentation, the market's total risk is priced.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="goals-discount-rate" data-subject="资产配置">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>目标导向资产配置：目标成功概率与折现率</strong></p>
+    <h2>目标导向资产配置：目标成功概率与折现率</h2>
         <p class="framework-note"><strong>上位框架：</strong>目标导向投资（goals-based investing）把每个目标视为一项带有期限、金额和最低成功概率的负债。折现率不是单纯的平均预期收益率，而是把目标可靠性要求转换为当前所需资金的桥梁。</p>
         <p>目标导向资产配置使用与目标成功概率相匹配的保守收益率来折现未来目标，而不是直接使用组合的平均预期收益率。要求的成功概率越高，可依赖的折现率越低，目标的当前资金成本越高；组合波动率越高，在相同成功概率下也需要采用更保守的折现率。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div>当目标成功概率高于50%时，相关折现率应低于组合预期收益率。成功概率要求越高，折现率越低，当前所需资金越多。</div>
         <p class="english-recall">A higher required probability of success implies a lower goal discount rate and a higher current funding requirement.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="asset-class-specification" data-subject="资产配置">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>战略资产配置中的资产类别划分（asset class specification）</strong></p>
+    <h2>战略资产配置中的资产类别划分（asset class specification）</h2>
         <p class="framework-note"><strong>上位框架：</strong>战略资产配置（SAA）先定义可优化的资产类别，再估计其风险收益并确定长期权重。类别划分的质量决定优化结果是否具有经济意义和可执行性。</p>
         <p>资产类别划分解决的是“哪些资产应归入同一类别”，而不是投资者应持有多少低风险或高流动性资产。同一类别内部的资产应具有相近的风险收益特征；不同类别之间应边界清楚并能够提供分散化。全部类别合在一起还应覆盖主要可投资财富，并具有足够的市场容量，使投资者能够配置有意义的金额而不显著损害流动性。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div>类别内部：relatively homogeneous。</div>
         <div>类别之间：mutually exclusive，并具有 diversification benefits。</div>
         <div>类别整体：覆盖主要 investable wealth；单个类别具有足够的 capacity and liquidity。</div>
         <div>投资者的风险承受能力和流动性需求影响各类别的配置权重，不是资产类别本身的划分标准。</div>
         <p class="english-recall">Asset classes should be internally homogeneous, mutually exclusive, diversifying, and collectively representative of the investable opportunity set.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="private-wealth-definitions" data-subject="投资组合构建">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>私人财富口径与个人经济资产负债表</strong></p>
+    <h2>私人财富口径与个人经济资产负债表</h2>
         <p class="framework-note"><strong>上位框架：</strong>个人投资组合构建不能只看证券账户，而要把可投资资产、实物财富、人力资本和未来消费目标放进同一张经济资产负债表。不同财富口径回答的是不同决策问题，不能混用。</p>
         <p>Investable wealth是可方便用于投资的liquid investments和cash；financial wealth是个人持有的金融资产。Primary residence等有形房地产属于real wealth，不属于investable wealth或financial wealth；human capital是预期未来劳动收入的现值。Economic net worth采用最广口径，将金融资产、实物资产和human capital等经济资源合并，并扣除负债。</p>
         <p>个人经济资产负债表还把未来消费与遗赠目标的现值视为隐含负债。经济盈余等于总经济资产减总经济负债。因此，当两个人的总经济资产与经济盈余均相同时，其总经济负债也相同；若其中一人的显性债务更高，其未来消费与遗赠等隐含负债之和必然更低。Human capital属于经济资产，不等于经济盈余，两人的经济盈余相同也不代表human capital相同。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">Investable wealth = Liquid investments + Cash</div>
         <div class="formula">Investable net worth = Investable wealth − Relevant short-term liabilities</div>
         <div class="formula">Economic net worth = Financial wealth + Real wealth + Human capital + Other economic assets − Liabilities</div>
@@ -361,64 +325,40 @@
         <div>Primary residence → Real wealth；未来劳动收入现值 → Human capital；两者均不属于financial wealth。</div>
         <div>总经济资产与经济盈余相同 → 总经济负债相同；显性债务越高 → 在其他条件不变时，未来消费与遗赠等隐含负债越低。</div>
         <p class="english-recall">Economic net worth includes financial wealth, real wealth, and human capital, net of both explicit and implicit liabilities.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="institutional-investment-models" data-subject="机构投资组合管理案例分析专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Endowment、Canada与Norway投资模式</strong></p>
+    <h2>Endowment、Canada与Norway投资模式</h2>
         <p class="framework-note"><strong>上位框架：</strong>机构投资模式把资产配置、治理能力、管理方式和实施成本连接起来。三种模式的核心差异不只是“持有什么”，更在于哪些能力由内部承担、哪些委托外部，以及机构能否承受相应的流动性和复杂性。</p>
         <p>Endowment model通常大量配置hedge funds、private equity等另类资产，强调主动管理，并广泛依赖专业external managers。Canada model也重视private markets和主动投资，但核心是建立强大的内部团队，通过直接投资和联合投资降低对外部管理人的依赖及费用。Norway model主要投资公开市场股票和债券，强调广泛分散、透明度、规模化与低成本，整体更接近基准化管理。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>Endowment：</strong>另类资产多 + 高度主动管理 + 依赖外部管理人。</div>
         <div><strong>Canada：</strong>private markets较多 + 强大内部团队 + direct/co-investment + 较低外部费用。</div>
         <div><strong>Norway：</strong>公开市场为主 + 广泛分散 + 透明、低成本 + 相对基准化。</div>
         <p class="english-recall">Endowment: alternatives and external managers; Canada: internal direct investing; Norway: diversified public markets and low-cost implementation.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="bank-equity-duration" data-subject="机构投资组合管理案例分析专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>银行权益资本的利率敏感度（asset–liability duration exposure）</strong></p>
+    <h2>银行权益资本的利率敏感度（asset–liability duration exposure）</h2>
         <p class="framework-note"><strong>上位框架：</strong>银行资产负债管理（bank ALM）关注利率变化如何同时改变资产、负债与权益价值。分析对象是净值的经济敏感度，而不是只比较两边的duration数字。</p>
         <p>银行的权益资本满足E = A − L，因此利率变化对权益的影响等于资产价值变化减去负债价值变化。利用modified duration估算时，利率上升会使资产和负债价值都下降；资产价值下降损害权益，而负债价值下降因为减少了需要扣除的负债，反而部分抵消资产端损失。若资产与负债收益率并非一比一变动，必须分别使用各自的收益率变化。</p>
         <p>计算权益资本的百分比变化时，应先把负债按L/A加权，再除以E/A。权益资本占资产比例越小，相同的资产负债价值缺口对权益的放大作用越强。基点必须先换算为小数，例如50 bps = 0.005。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">E = A − L；L/A = 1 − E/A</div>
         <div class="formula">ΔA ≈ −D<sub>A</sub>AΔy<sub>A</sub>；ΔL ≈ −D<sub>L</sub>LΔy<sub>L</sub></div>
         <div class="formula">ΔE/E ≈ [−D<sub>A</sub>Δy<sub>A</sub> + D<sub>L</sub>(L/A)Δy<sub>L</sub>] / (E/A)</div>
         <div>若Δy<sub>L</sub> = bΔy<sub>A</sub>，则：</div>
         <div class="formula">ΔE/E ≈ −[D<sub>A</sub> − b(L/A)D<sub>L</sub>]Δy<sub>A</sub> / (E/A)</div>
         <div><strong>方向：</strong>利率上升时，若资产端duration exposure大于经利率变动比例调整后的负债端exposure，权益资本价值下降。</div>
-      </dd>
-    </dl>
   </article>
 
   <article id="pension-abo-pbo" data-subject="机构投资组合管理案例分析专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Defined Benefit Pension Plan：ABO与PBO</strong></p>
+    <h2>Defined Benefit Pension Plan：ABO与PBO</h2>
         <p class="framework-note"><strong>上位框架：</strong>养老金ALM必须先选定与计划状态一致的负债口径，再比较资产与负债的现值和利率敏感度。ABO/PBO的选择决定funded status、surplus及后续duration管理的基准。</p>
         <p><strong>Accumulated Benefit Obligation（ABO）</strong>是员工截至估值日已经累积的养老金福利现值，按照当前薪资水平计算，不包含未来薪资增长。<strong>Projected Benefit Obligation（PBO）</strong>同样衡量已累积服务所对应的福利，但把预计未来薪资增长纳入估值，因此通常高于ABO。</p>
         <p>若养老金计划将继续维持现有设计并且员工未来薪资预计继续增长，应使用PBO衡量需要管理的经济负债；若计划已经冻结或终止、不再考虑未来薪资增长，则ABO通常是更合适的负债口径。</p>
         <p>分析利率变化后的funded status或surplus时，应分别利用资产与所选负债口径的effective duration估算价值变化，再以更新后的资产价值减去更新后的负债价值。不能因为题目同时给出ABO和PBO就同时使用两者。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>ABO：</strong>current salary；不包含future salary growth；通常用于frozen／terminated plan。</div>
         <div><strong>PBO：</strong>projected future salary；包含future salary growth；通常用于continuing plan。</div>
         <div>通常：PBO ≥ ABO。</div>
@@ -427,44 +367,28 @@
         <div class="formula">Pension surplus = Updated assets − Updated pension liabilities</div>
         <div>若负债duration高于资产duration：利率上升通常使负债下降更多、surplus增加；利率下降通常使负债上升更多、surplus减少。</div>
         <p class="english-recall">PBO includes expected future salary growth, whereas ABO is based on current salary levels.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="quantitative-vs-fundamental" data-subject="权益类投资组合管理专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Active Strategies：Fundamental、Quantitative与Hybrid</strong></p>
+    <h2>Active Strategies：Fundamental、Quantitative与Hybrid</h2>
         <p class="framework-note"><strong>上位框架：</strong>主动权益管理先决定预期收益信号如何形成，再把信号转化为组合。Fundamental与Quantitative区分的是决策生产过程，而不是是否使用财务数据、估值模型或统计工具。</p>
         <p>CFA将active equity strategies分为两大类：fundamental approaches与quantitative approaches；现实中也存在结合两者的hybrid approaches。Fundamental approach通常由分析师对较少证券进行深入研究并形成判断，但也会使用free cash flow等估值模型、quantitative screening和regression analysis。Quantitative approach则以系统化、规则化且可重复的模型覆盖大量证券，但其变量也经常来自公司基本面，例如估值、盈利能力、成长性、杠杆和盈利预测修正。</p>
         <p>因此，不能根据“是否使用基本面数据”或“是否使用统计工具”划分类别；真正的区别在于投资决策主要由分析师逐家公司解释和判断，还是由系统化模型统一产生。量化管理通常进一步利用多因子风险模型、协方差矩阵和组合优化，在portfolio level控制行业、风格、因子及tracking error等风险。模型虽可自动运行，但变量选择、模型结构、数据处理和约束设置仍需要专业判断。Hybrid approach可由量化模型筛选候选证券，再由基本面分析师研究和选择，并通过optimizer控制组合风险。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>CFA层级：</strong>Active strategies → Fundamental approaches / Quantitative approaches；两者结合形成Hybrid approaches。</div>
         <div><strong>Fundamental：</strong>核心是分析师逐家公司解释与判断；可以使用估值模型、量化筛选和统计技术。</div>
         <div><strong>Quantitative：</strong>核心是系统化模型统一产生预测和权重；可以大量使用公司基本面变量，并通常在portfolio level控制风险。</div>
         <div><strong>Hybrid：</strong>量化筛选或建模 + 基本面研究与判断 + 系统化组合优化。</div>
         <div>使用基本面数据不必然是Fundamental；使用回归或计算机不必然是Quantitative或Passive。分类取决于最终投资决策的形成机制。</div>
         <p class="english-recall">The distinction is the decision process: fundamental strategies rely primarily on analyst judgment, whereas quantitative strategies apply systematic, repeatable models across many securities.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="active-management-two-dimensions" data-subject="权益类投资组合管理专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>主动管理的两个独立维度</strong></p>
+    <h2>主动管理的两个独立维度</h2>
         <p class="framework-note"><strong>上位框架：</strong>权益策略可以同时从“决策如何形成”和“分析从哪里开始”两个维度描述。把这两个维度分开，才能准确识别systematic bottom-up、discretionary top-down等组合。</p>
         <p>Systematic与Discretionary描述投资决策如何形成：前者依靠预设规则、因子模型和优化程序，后者更多依靠分析师与基金经理判断。Bottom-up与Top-down描述分析从哪个层次开始：前者从单个证券及其特征开始，后者从宏观、国家、行业、风格或因子层面开始。因此systematic不等于top-down，discretionary也不等于bottom-up，四种组合都可能存在。</p>
         <p>Systematic bottom-up通常使用统一模型，根据value、momentum、quality、growth、盈利修正等security-specific characteristics对大量证券评分、排名并构建分散组合。Systematic top-down则可能按规则实施factor timing、sector rotation或country allocation。Discretionary bottom-up常见于基本面个股研究和高信念选股；discretionary top-down则依据宏观判断配置国家、行业或风格。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>Systematic vs. Discretionary：</strong>模型和规则决策 vs. 分析师与管理人判断。</div>
         <div><strong>Bottom-up vs. Top-down：</strong>从个股开始 vs. 从宏观、国家、行业、风格或因子开始。</div>
         <div><strong>Systematic bottom-up：</strong>security scoring/ranking、security-specific factors、通常持仓较分散。</div>
@@ -472,43 +396,27 @@
         <div><strong>Discretionary bottom-up：</strong>深入公司研究、基本面选股、较常见集中高信念组合。</div>
         <div><strong>Discretionary top-down：</strong>依据宏观观点主动配置国家、行业或风格。</div>
         <p class="english-recall">Systematic versus discretionary describes how decisions are made; bottom-up versus top-down describes where the analysis begins.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="index-vs-active-factor" data-subject="权益类投资组合管理专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Factor-Based Strategies为什么同时属于Index-Based与Active Equity</strong></p>
+    <h2>Factor-Based Strategies为什么同时属于Index-Based与Active Equity</h2>
         <p class="framework-note"><strong>上位框架：</strong>因子是预期收益和风险的来源，主动或指数化是实施方式。相同的value、momentum或quality exposure既可被规则指数固定下来，也可由管理人动态调整。</p>
         <p>Factor描述组合希望获得的系统性风险敞口，Index-Based或Active则描述这些敞口如何管理，因此factor strategy本身并不天然属于主动或被动。Index-based factor strategy把因子选择、定义、权重和再平衡方式预先写入指数规则，基金以复制该因子指数、降低相对该指数的tracking error为目标，属于“前端主动设计、后端被动执行”。Active factor strategy则由管理人或量化模型根据预期因子收益、估值或市场信号持续选择、调整或择时因子敞口，主动承担相对宽基基准的风险以获取alpha。</p>
         <p>规则化或自动化并不等于被动管理。即使交易完全由模型执行，只要组合不是复制预先指定的外部指数，而是根据模型信号持续改变因子或个股敞口并寻求跑赢基准，仍属于active management。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>Index-based factor：</strong>固定透明的指数规则 + 跟踪因子指数 + 控制相对该指数的tracking error。</div>
         <div><strong>Active factor：</strong>持续选择、调整或择时因子暴露 + 主动承担相对宽基基准的tracking risk + 寻求alpha。</div>
         <div><strong>Systematic ≠ Passive：</strong>判断标准不是是否自动交易，而是“复制既定指数”还是“根据投资观点主动偏离基准”。</div>
         <div>Factor说明“投资什么风险来源”；Index-Based或Active说明“如何实施和管理”。</div>
         <p class="english-recall">A factor strategy can be index based or active: the factor defines the exposure, while the mandate defines how that exposure is implemented and managed.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="long-short-vs-long-only" data-subject="权益类投资组合管理专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Long–Short与Long-Only的本质区别</strong></p>
+    <h2>Long–Short与Long-Only的本质区别</h2>
         <p class="framework-note"><strong>上位框架：</strong>组合构建把证券观点转化为权重和风险敞口。Long-only只能在零权重与正权重之间表达观点；long–short允许负权重，因此能更完整地传递正、负两类预测，但同时引入杠杆、融资和卖空约束。</p>
         <p>Long–short策略并不要求多头上涨且空头标的下跌，而是押注多头组合的表现优于空头组合。市场上涨时，只要多头涨得更多，组合仍可盈利；市场下跌时，只要空头标的跌得更多，空头收益可以超过多头损失。若两端表现相同，则收益相互抵消；若多头跑输空头，组合亏损。相较long-only只能买入看好的证券并将不看好的证券降至零权重，long–short还能通过做空直接实施负面观点，提高投资观点的transfer coefficient和潜在alpha。</p>
         <p>Long-extension组合仍保留净多头市场敞口。例如130/30可拆成100%的long-only core，加上30% long与30% short的主动overlay，因此既参与市场整体上涨，又利用多空选股差异争取额外alpha。Market-neutral组合则通过匹配多空两端的系统性风险，尽量消除市场方向影响、保留相对选股收益。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">Long–short return ≈ R<sub>L</sub> − R<sub>S</sub></div>
         <div class="formula">Gross exposure = Long exposure + |Short exposure|</div>
         <div class="formula">Net exposure = Long exposure − |Short exposure|</div>
@@ -516,146 +424,94 @@
         <div class="formula">Systematic exposure ≈ β<sub>L</sub>w<sub>L</sub> − β<sub>S</sub>w<sub>S</sub></div>
         <div><strong>关键：</strong>dollar neutral不一定等于beta neutral；多空名义金额相同但beta不同，市场风险仍不会完全抵消。</div>
         <p class="english-recall">A long–short portfolio profits when the long positions outperform the short positions; it does not require both sides to generate positive standalone returns.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="risk-contribution" data-subject="投资组合构建">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>风险预算：边际、绝对与相对风险贡献</strong></p>
+    <h2>风险预算：边际、绝对与相对风险贡献</h2>
         <p class="framework-note"><strong>上位框架：</strong>风险预算（risk budgeting）不是按资本权重分配资产，而是把组合总风险分解到各资产或因子，再判断当前风险承担是否符合投资目标。</p>
         <p>边际风险贡献（MCTR）衡量某资产权重发生微小变化时，组合总波动率的变化率；它取决于该资产与整体组合的共同变动，而不只是资产自身的波动率。绝对风险贡献（ACTR）将边际风险贡献与实际持仓权重结合，表示该资产当前贡献的组合风险；相对风险贡献则表示该贡献占组合总风险的比例。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">MCTR<sub>i</sub> = ∂σ<sub>P</sub>/∂w<sub>i</sub> = Cov(R<sub>i</sub>, R<sub>P</sub>)/σ<sub>P</sub> = β<sub>i,P</sub> × σ<sub>P</sub></div>
         <div class="formula">ACTR<sub>i</sub> = w<sub>i</sub> × MCTR<sub>i</sub></div>
         <div class="formula">Σ ACTR<sub>i</sub> = σ<sub>P</sub></div>
         <div class="formula">Relative Risk Contribution<sub>i</sub> = ACTR<sub>i</sub>/σ<sub>P</sub></div>
         <p class="english-recall">Marginal risk contribution is a sensitivity; absolute risk contribution is the asset's total contribution to portfolio risk.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="tax-treatment" data-subject="投资组合构建">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>应税组合中不同收益来源的税收待遇</strong></p>
+    <h2>应税组合中不同收益来源的税收待遇</h2>
         <p class="framework-note"><strong>上位框架：</strong>税后组合构建同时处理资产配置、收益来源和账户位置（asset location）。关键不是只比较名义税率，而是比较税率、实现时点和递延复利三者共同形成的税后终值。</p>
         <p>不同收益来源的税后结果取决于适用税率和纳税时间。利息和股息通常在取得时产生当期纳税义务；长期资本利得通常在出售资产、利得实现时才纳税，因此还具有递延纳税带来的复利优势。对于应税投资者，应关注税后收益，并将适用税率较高、当期纳税较多的资产或策略优先配置在税收优惠账户。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div>在主要税收制度下，通常适用税率由高到低为：利息收入 &gt; 股息收入 &gt; 长期资本利得。</div>
         <div>长期资本利得通常还具有递延纳税优势。</div>
         <p class="english-recall">Interest income is typically taxed more heavily than dividends and long-term capital gains; deferred gains also retain more capital for compounding.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="sma-vs-pooled-vehicle" data-subject="投资组合构建">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>投资载体选择：Separately Managed Account（SMA）与 pooled vehicle</strong></p>
+    <h2>投资载体选择：Separately Managed Account（SMA）与 pooled vehicle</h2>
         <p class="framework-note"><strong>上位框架：</strong>投资载体选择是组合实施的一部分：同一投资策略通过不同载体实施，会改变税务控制、定制能力、成本、流动性和运营复杂度。</p>
         <p>SMA中的证券由客户直接持有，能够根据客户自身的tax basis、未实现资本利得和税务约束定制交易。对于持有大额未实现利得的应税投资者，管理人可以保留高嵌入利得头寸、控制资本利得的实现时间并进行tax-loss harvesting，减少转换至新策略时立即产生的纳税负担。Pooled vehicle由投资者共同持有同一组合，通常具有规模经济和较低成本，但投资者不能按自己的税基控制组合交易，还可能承担基金分配的已实现资本利得。</p>
         <p>未实现利得对非应税或税收优惠账户通常不构成税务障碍，因此这类账户不需要为个性化税务管理额外采用SMA；在其他条件相同的情况下，可以优先利用pooled vehicle的成本与分散化优势。投资载体的判断不是简单地把“应税账户”一律对应SMA，而是看个性化税务管理的价值是否足以补偿SMA可能较高的成本和管理要求。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div>应税账户＋大额未实现利得／特殊税基 → SMA通常更合适：可保留高嵌入利得头寸、控制利得实现并进行tax-loss harvesting。</div>
         <div>非应税账户 → 未实现利得没有当期税务影响；若无其他定制需求，pooled vehicle通常更具成本与分散化优势。</div>
         <div>Pooled vehicle不能围绕单个投资者的tax basis定制交易，并可能向应税投资者分配基金层面的已实现资本利得。</div>
         <p class="english-recall">An SMA is more suitable when investor-specific tax management is valuable; a pooled vehicle generally offers greater economies of scale but less customization.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="currency-risk-premium" data-subject="资产配置">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>资产风险溢价与货币价值</strong></p>
+    <h2>资产风险溢价与货币价值</h2>
         <p class="framework-note"><strong>上位框架：</strong>汇率的经济基本面方法把货币视为跨境资产配置的相对价格。资本流动取决于一国资产的预期收益和所需风险补偿，因此风险溢价变化会通过资产需求影响货币价值。</p>
         <p>在经济基本面与资产市场框架下，投资者会比较不同货币计价资产的风险调整后吸引力。其他条件不变时，某种货币计价资产的 required risk premium 下降，表示投资者持有这些资产所要求的风险补偿降低，其风险调整后吸引力提高，对相关资产及该货币的需求增加，该货币趋于升值；required risk premium 上升则产生相反压力。</p>
         <p>“风险溢价下降”不能简单理解为“收益率下降，所以资产吸引力下降”。这里讨论的是投资者要求的风险补偿下降；资产价格和汇率会相应调整，使预期风险调整后收益重新达到均衡。</p>
         <p>判断汇率升降时还必须结合报价方式。若 <em>S</em><sub>P/B</sub> 表示每 1 单位 base currency（B）对应的 price currency（P）数量，则 base currency 升值时 <em>S</em><sub>P/B</sub> 上升；price currency 升值时 <em>S</em><sub>P/B</sub> 下降。</p>
-      </dd>
-      <dt>核心公式或结论</dt>
-      <dd>
+
         <div>其他条件不变：某货币计价资产的 required risk premium ↓ → 该货币趋于升值。</div>
         <div>其他条件不变：某货币计价资产的 required risk premium ↑ → 该货币趋于贬值。</div>
         <div class="formula"><em>S</em><sub>P/B</sub> = 每 1 单位 base currency（B）对应的 price currency（P）数量</div>
         <div>Base currency 升值 → <em>S</em><sub>P/B</sub> 上升；price currency 升值 → <em>S</em><sub>P/B</sub> 下降。</div>
         <p class="english-recall">All else equal, a decline in the required risk premium on assets denominated in a currency tends to support appreciation of that currency.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="macro-vs-micro-hedge" data-subject="衍生品与风险管理">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Macro hedge 与 Micro hedge</strong></p>
+    <h2>Macro hedge 与 Micro hedge</h2>
         <p class="framework-note"><strong>上位框架：</strong>对冲设计先确定要管理的是组合层面的共同风险，还是单一头寸的特定风险，再选择敏感度、期限和流动性相匹配的工具。Macro/Micro描述风险聚合层级，不由币种数量或交易场所决定。</p>
         <p><strong>Macro hedge（宏观对冲）</strong>针对可能影响整个投资组合的宏观金融情景或共同风险因子，例如市场整体下跌、利率普遍变化、信用利差整体扩大或汇率发生系统性变动。它从组合总风险暴露出发进行整体性对冲，不要求对每一项资产逐一精确匹配。</p>
         <p><strong>Micro hedge（微观对冲）</strong>针对某一项具体资产、负债、承诺或现金流的特定风险，强调对冲工具与被对冲项目在名义金额、期限、敏感度等方面尽可能匹配。</p>
         <p>Macro 与 micro 的区分依据是<strong>被对冲风险的范围</strong>，而不是涉及的货币数量、交易规模、交易场所或是否采用场外工具。Macro hedge 因为使用较宽泛的市场工具覆盖组合风险，通常仍可能留下 basis risk 或其他残余风险。</p>
-      </dd>
-      <dt>核心公式或结论</dt>
-      <dd>
+
         <div>整个组合＋宏观情景／共同风险因子 → Macro hedge。</div>
         <div>单一头寸／特定现金流＋精确匹配 → Micro hedge。</div>
         <div>判断关键：看被对冲风险的覆盖范围，不看交易规模、货币数量或交易场所。</div>
         <p class="english-recall">A macro hedge addresses a common risk affecting the entire portfolio, whereas a micro hedge targets a specific position, liability, or cash flow.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="macro-vs-micro-attribution" data-subject="业绩归因与评价">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>机构投资层级下的 Macro attribution 与 Micro attribution</strong></p>
+    <h2>机构投资层级下的 Macro attribution 与 Micro attribution</h2>
         <p class="framework-note"><strong>上位框架：</strong>业绩归因必须映射真实的投资决策层级。Macro attribution解释资产所有者如何设定政策并配置管理人；Micro attribution解释单个管理人在既定mandate内如何创造或损失active return。</p>
         <p>CFA业绩归因框架中的 fund 通常是养老金、捐赠基金、保险资金等机构资产池，不应简单等同于由单一基金经理直接管理的零售基金。资产所有者或 fund sponsor 先制定整体投资政策，再把总资产划分为不同资产类别或 mandate，并可以聘请不同的内部或外部投资管理人分别执行。</p>
         <p><strong>Macro attribution</strong>评价资产所有者／fund sponsor的决策，分析层级通常是总基金和资产类别。典型决策包括战略资产配置、对政策权重的主动偏离、再平衡、管理人选择以及向不同mandate分配资金。</p>
         <p><strong>Micro attribution</strong>评价单个投资组合经理在既定mandate内的决策，分析层级通常是单个管理人账户。典型决策包括国家或行业配置、久期与收益率曲线定位、信用配置以及证券选择。</p>
         <p>二者按<strong>决策责任人</strong>区分，而不是简单按“资产配置”和“证券选择”区分。选择哪位管理人属于macro decision；被选中的管理人如何配置行业、调整久期或选择证券，属于micro decision。</p>
-      </dd>
-      <dt>核心公式或结论</dt>
-      <dd>
+
         <div>Asset owner／fund sponsor的政策与实施决策 → Macro attribution。</div>
         <div>Individual portfolio manager在授权范围内的主动决策 → Micro attribution。</div>
         <div>总基金／资产类别层级 → Macro；单个管理人账户层级 → Micro。</div>
         <div>选择管理人 → Macro decision；管理人选择证券 → Micro decision。</div>
         <div>Macro不只分析资产配置；Micro也不只分析单只证券。</div>
         <p class="english-recall">Macro attribution evaluates the asset owner's policy and manager-allocation decisions; micro attribution evaluates the portfolio manager's decisions within a mandate.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="brinson-attribution-models" data-subject="业绩归因与评价">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Brinson–Hood–Beebower（BHB）与 Brinson–Fachler（BF）归因模型</strong></p>
+    <h2>Brinson–Hood–Beebower（BHB）与 Brinson–Fachler（BF）归因模型</h2>
         <p class="framework-note"><strong>上位框架：</strong>Brinson归因把权益组合相对基准的收益差分解为allocation、selection及必要时的interaction。BHB与BF共享这一结构，但对allocation effect的经济含义采用不同参照点。</p>
         <p>两种模型都把组合相对基准的收益分解为allocation、selection和interaction。它们的主要区别是<strong>行业层面的allocation effect如何定义</strong>；selection和interaction的公式相同。</p>
         <p>设 <em>w</em><sub>P,i</sub>、<em>w</em><sub>B,i</sub>分别为组合与基准在行业<em>i</em>的权重，<em>r</em><sub>P,i</sub>、<em>r</em><sub>B,i</sub>分别为组合与基准在该行业的收益率，<em>R</em><sub>B</sub>为整体基准收益率。</p>
         <p><strong>BHB模型：</strong>allocation effect使用该行业自身的基准收益率。超配一个收益率为正的行业会产生正配置效应，即使该行业跑输整体基准；整体基准收益率不参与单个行业的BHB allocation计算。</p>
         <p><strong>Brinson–Fachler模型：</strong>allocation effect使用该行业相对整体基准的收益率，更直接评价“是否超配赢家、低配输家”。超配跑赢整体基准的行业为正；超配跑输整体基准的行业为负，低配时方向相反。</p>
         <p>在组合权重和基准权重都加总为100%的情况下，两种模型的<strong>行业配置效应分配</strong>不同，但总allocation effect相同，因为所有行业active weights之和为零。</p>
-      </dd>
-      <dt>核心公式或结论</dt>
-      <dd>
+
         <div class="formula">BHB allocation：A<sub>i</sub><sup>BHB</sup> = (w<sub>P,i</sub> − w<sub>B,i</sub>) × r<sub>B,i</sub></div>
         <div class="formula">Brinson–Fachler allocation：A<sub>i</sub><sup>BF</sup> = (w<sub>P,i</sub> − w<sub>B,i</sub>) × (r<sub>B,i</sub> − R<sub>B</sub>)</div>
         <div class="formula">Selection：S<sub>i</sub> = w<sub>B,i</sub> × (r<sub>P,i</sub> − r<sub>B,i</sub>)</div>
@@ -663,23 +519,16 @@
         <div>BHB看“active weight × 行业自身收益”；BF看“active weight × 行业相对整体基准收益”。</div>
         <div>Selection衡量行业内部证券选择；interaction衡量主动权重与行业内部超额收益的共同作用。</div>
         <p class="english-recall">BF benchmarks sector allocation against the total benchmark return; BHB benchmarks it against the sector return.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="benchmark-misfit-return" data-subject="业绩归因与评价">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Manager’s Normal Portfolio、Manager Active Return 与 Misfit Active Return</strong></p>
+    <h2>Manager’s Normal Portfolio、Manager Active Return 与 Misfit Active Return</h2>
         <p class="framework-note"><strong>上位框架：</strong>管理人评价必须区分“经理偏离自己正常风格创造的收益”和“正常风格本身偏离投资者总基金基准造成的收益”。否则会把benchmark mismatch误当成manager skill。</p>
         <p>Manager’s normal portfolio表示经理在没有特殊主动观点时，按照其正常投资风格和策略持有的组合，因此可作为更贴近经理实际mandate的style／strategy benchmark。</p>
         <p>当资产所有者使用的broad market benchmark与经理的正常风格不一致时，组合相对于广泛市场的active return会同时包含两部分：经理相对于normal portfolio的真正主动管理收益，以及normal portfolio相对于broad benchmark的风格错配收益。</p>
         <p><strong>Misfit active return</strong>反映经理正常投资风格与广泛市场benchmark之间的差异，不应自动解释为经理通过主动配置或证券选择创造的alpha。它往往反映benchmark选择、manager selection或mandate设计造成的系统性风格错配。</p>
         <p>合适的benchmark应能解释经理的正常风格暴露；扣除合适benchmark后的active return不应继续与该style return显著相关。若仍显著相关，通常提示benchmark misspecification。</p>
-      </dd>
-      <dt>核心公式或结论</dt>
-      <dd>
+
         <div class="formula">Total active return = R<sub>P</sub> − R<sub>B</sub></div>
         <div class="formula">Manager active return = R<sub>P</sub> − R<sub>N</sub></div>
         <div class="formula">Misfit active return = R<sub>N</sub> − R<sub>B</sub></div>
@@ -687,157 +536,93 @@
         <div>其中R<sub>P</sub>为实际组合收益，R<sub>N</sub>为manager’s normal portfolio收益，R<sub>B</sub>为broad market benchmark收益。</div>
         <div>Actual portfolio − Normal portfolio → 经理主动管理收益；Normal portfolio − Broad benchmark → Misfit active return。</div>
         <p class="english-recall">Misfit active return is the return of the manager's normal portfolio minus the return of the broad market benchmark.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="manager-selection-errors" data-subject="业绩归因与评价">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>经理筛选中的Type I与Type II Error</strong></p>
+    <h2>经理筛选中的Type I与Type II Error</h2>
         <p class="framework-note"><strong>上位框架：</strong>管理人选择本质上是在有限样本下推断skill。收益分布的均值差、离散程度和样本量共同决定有能力与无能力管理人被混淆的概率。</p>
         <p><strong>Type I error</strong>是把没有真实能力的经理误判为有能力，因此错误地聘用或继续保留该经理；<strong>Type II error</strong>是把真正有能力的经理误判为无能力，因此没有聘用或错误地解雇该经理。</p>
         <p>判断这两类错误是否容易发生，要比较skilled与unskilled managers的收益分布。若skilled managers在候选总体中占比较大，而且其平均收益明显高于unskilled managers，则更容易识别真正有能力的经理。若两组收益的dispersion相对于均值差距较小，两个分布的重叠区域也较小，Type I和Type II error的发生概率及预期成本通常较低。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>Type I：</strong>hire／retain an unskilled manager（false positive）。</div>
         <div><strong>Type II：</strong>do not hire／fire a skilled manager（false negative）。</div>
         <div>Skilled managers占比较大＋平均收益明显更高 → 更容易识别skilled manager。</div>
         <div>Dispersion相对均值差距较小 → 分布重叠较少 → 两类误判更少。</div>
         <p class="english-recall">Greater mean separation and lower dispersion reduce distribution overlap and manager-selection errors.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="gips-seed-portfolios" data-subject="业绩归因与评价">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>GIPS：Seed money portfolios纳入composite</strong></p>
+    <h2>GIPS：Seed money portfolios纳入composite</h2>
         <p class="framework-note"><strong>上位框架：</strong>GIPS composite construction要求把采用相似mandate、objective或strategy的实际discretionary portfolios按一致规则纳入，防止事后挑选业绩。Seed money的关键是它是否构成真实且可全权管理的组合，而不是资金是否来自客户。</p>
         <p>公司用自有资金建立并实际管理的新策略组合属于actual、discretionary、non-fee-paying portfolio，而不是模拟组合。只要符合相应composite的investment mandate、objective或strategy定义，就可以从成立日起纳入；不需要先积累三年业绩。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div>符合定义的seed money portfolio可以从inception起纳入适当composite，但并非因为是non-fee-paying portfolio就必须纳入。</div>
         <div>一旦纳入，必须与fee-paying portfolios适用相同的composite政策和程序，并遵守适用的non-fee-paying portfolio披露与报告要求。</div>
         <p class="english-recall">An actual, discretionary seed-money portfolio may be included in the appropriate composite from inception, subject to the requirements for non-fee-paying portfolios.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="gips-terminated-portfolios" data-subject="业绩归因与评价">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>GIPS：Terminated portfolios的排除时间</strong></p>
+    <h2>GIPS：Terminated portfolios的排除时间</h2>
         <p class="framework-note"><strong>上位框架：</strong>Composite的进入和退出规则必须基于投资授权而非业绩好坏。终止账户保留到最后一个仍具有discretion的完整计量期间，以避免survivorship bias。</p>
         <p>终止组合必须保留在composite的历史业绩中，直至公司仍拥有investment discretion的最后一个完整业绩计量期间。判断重点是公司何时失去实施既定策略的权力，而不是合同正式终止日或资产实际转出日；客户要求停止交易、立即清算或施加重大限制时，公司通常即失去discretion。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div>纳入截止日 = 公司仍拥有discretion的last full measurement period期末。</div>
         <div>按月计算composite＋月中失去discretion → 该月不纳入，保留至上一个月末。</div>
         <p class="english-recall">A terminated portfolio remains in the composite through the last full measurement period in which the firm had investment discretion.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="gips-performance-history" data-subject="业绩归因与评价">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>GIPS Composite Report的业绩展示年限</strong></p>
+    <h2>GIPS Composite Report的业绩展示年限</h2>
         <p class="framework-note"><strong>上位框架：</strong>GIPS的历史展示规则在“新策略缺少长记录”与“投资者需要足够历史”之间取得平衡：先满足初次最低历史，再逐年扩展至规定长度。</p>
         <p>“至少提供五年业绩”是<strong>初次展示时</strong>的最低要求；若composite成立不足五年，则展示自成立以来的全部业绩。此后每年增加一年，直至建立至少十年的GIPS-compliant annual performance记录。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div>初次展示：至少5年；成立不足5年：展示since inception。</div>
         <div>之后逐年增加，直到至少10年；已有10年以上历史时，最低展示要求仍为10年。</div>
         <p class="english-recall">Initially present at least five years, or since inception if shorter; then add one year annually until ten years are shown.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="modified-dietz-return" data-subject="业绩归因与评价">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Modified Dietz与Modified IRR（GIPS官方称IRR Method）</strong></p>
+    <h2>Modified Dietz与Modified IRR（GIPS官方称IRR Method）</h2>
         <p class="framework-note"><strong>上位框架：</strong>当外部现金流发生在计量期内而又无法逐日估值时，需要近似计算期间收益。Modified Dietz采用线性时间权重近似，IRR method则求解使现金流现值关系成立的复合收益率。</p>
         <p>两种方法都考虑external cash flows发生的时间，可在现金流日没有重新估值时估计期间收益率。Modified Dietz把每笔现金流按实际参与投资的时间线性加权，能够直接计算；Modified IRR／IRR Method则假设资金按同一期间收益率复利，求解使期末价值等式成立的收益率，需要迭代计算。Modified Dietz可以理解为IRR等式的线性近似。</p>
         <p>外部流入不是投资收益；现金流发生得越早，参与投资时间越长，权重越高。若出现large external cash flow，应按照既定政策在现金流发生时估值，分别计算并几何链接sub-period returns。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">R<sub>MD</sub> = [V<sub>E</sub> − V<sub>B</sub> − ΣCF<sub>i</sub>] / [V<sub>B</sub> + Σ(w<sub>i</sub>CF<sub>i</sub>)]</div>
         <div class="formula">Modified IRR／IRR Method：V<sub>E</sub> = V<sub>B</sub>(1 + R) + Σ[CF<sub>i</sub>(1 + R)<sup>w<sub>i</sub></sup>]</div>
         <div class="formula">w<sub>i</sub> = 现金流发生后剩余投资天数 / 计量期间总天数</div>
         <div>End-of-day现金流当天不参与投资，从下一天开始计算剩余投资天数；外部流入为正CF，外部流出为负CF。</div>
         <div>Modified Dietz：线性加权、直接计算；Modified IRR／IRR Method：复利关系、迭代求解。</div>
         <p class="english-recall">Modified Dietz uses linear cash-flow weights; the IRR method compounds and solves iteratively.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="private-equity-irr-moic" data-subject="业绩归因与评价">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Private Equity业绩评价：IRR与MOIC的权重选择</strong></p>
+    <h2>Private Equity业绩评价：IRR与MOIC的权重选择</h2>
         <p class="framework-note"><strong>上位框架：</strong>私募投资的现金流时点由GP部分控制，因此评价需要同时观察时间敏感的IRR与规模敏感的MOIC。两者回答的问题不同，不能互相替代。</p>
         <p>IRR考虑capital calls和distributions的时间，可能因资本返还特别快而出现异常高的年化结果；MOIC衡量每单位投入资本形成的总价值，但不考虑实现这些价值所用的时间。评价private fund时应结合资本返还速度调整两项指标的权重，而不能只看其中一项。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">MOIC =（底层投资当前价值 + 累计分配）/ Total invested capital</div>
         <div>资本返还过快 → IRR可能因短持有期而虚高 → 更重视MOIC，检查实际财富倍数。</div>
         <div>资本返还过慢 → MOIC忽略资本长期占用的时间成本 → 更重视IRR。</div>
         <p class="english-recall">When capital is returned unusually quickly, place greater weight on MOIC; when capital is returned more slowly than expected, place greater weight on IRR.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="private-equity-nav-forecast" data-subject="业绩归因与评价">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Private investment partnership的期末NAV预测</strong></p>
+    <h2>Private investment partnership的期末NAV预测</h2>
         <p class="framework-note"><strong>上位框架：</strong>私募组合的流动性规划要把现有NAV的价值变化、未来capital calls和distributions放在同一现金流滚动表中。NAV预测是投资价值预测，不等于未缴承诺额预测。</p>
         <p>预测期末NAV时，先让期初NAV按照预期增长率变化，再加上预计capital contributions，并减去预计distributions。Capital contribution提高partnership NAV但消耗LP流动性；distribution降低partnership NAV但向LP返还现金。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">Ending NAV = Beginning NAV × (1 + Expected growth rate) + Expected contributions − Expected distributions</div>
         <div class="formula">Unfunded commitment = Total commitment − Contributed capital to date</div>
         <div>Unfunded commitment是未来可能被调用的剩余承诺，不等于下一期预计capital call；若题目给出expected contribution，应使用该数额。</div>
-      </dd>
-    </dl>
   </article>
 
   <article id="cross-currency-basis-swap" data-subject="衍生品与风险管理">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>交叉货币基差互换（cross-currency basis swap）：basis的归属与净现金流</strong></p>
+    <h2>交叉货币基差互换（cross-currency basis swap）：basis的归属与净现金流</h2>
         <p class="framework-note"><strong>上位框架：</strong>Cross-currency swap同时转换融资币种和浮动利率基准。分析时必须把原贷款与互换的两条现金流链合并，逐币种判断哪些reference rate抵消、哪些credit spread或basis最终保留。</p>
         <p>交叉货币基差互换交换两种货币的本金和定期利息现金流。若企业已经借入非美元货币、但希望把负债转换为美元负债，互换方向通常是：<strong>收取非美元利息，以抵消原贷款；支付美元利息</strong>。</p>
         <p>在USD／非USD交叉货币基差互换的常见课程报价约定下，<strong>USD腿按USD reference rate计算，basis加在非美元腿的reference rate上</strong>。basis的正负号决定非美元reference rate应加上还是减去basis；实际交易仍应核对具体报价方向。</p>
         <p>若非美元贷款利率为“非美元reference rate + credit spread”，而互换收取“非美元reference rate + basis”，合并后reference rate相互抵消，非美元端的净现金流取决于<strong>basis与贷款credit spread之差</strong>。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div>设非美元本金为 N<sub>F</sub>，美元本金为 N<sub>USD</sub>，每年结算 m 次，非美元和美元reference rate分别为 r<sub>F</sub>与r<sub>USD</sub>，贷款credit spread为s，basis为b。</div>
         <div class="formula">非美元贷款支付 = N<sub>F</sub> × (r<sub>F</sub> + s)/m</div>
         <div class="formula">互换非美元腿收取 = N<sub>F</sub> × (r<sub>F</sub> + b)/m</div>
@@ -846,15 +631,10 @@
         <div>半年结算时m = 2。若b &gt; s，非美元端为净收款；若b &lt; s，非美元端为净付款。</div>
         <div><strong>考场检查顺序：</strong>先判断每条腿的收付方向 → 将basis加到非美元reference rate → 与原贷款现金流合并 → 最后按结算频率折算。</div>
         <p class="english-recall">Under the common USD quotation convention, the cross-currency basis is added to the non-USD reference-rate leg.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="non-deliverable-forward" data-subject="衍生品与风险管理">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Non-deliverable forward（NDF）与普通货币远期</strong></p>
+    <h2>Non-deliverable forward（NDF）与普通货币远期</h2>
         <p class="framework-note"><strong>上位框架：</strong>NDF属于货币远期对冲工具，专门解决受资本管制或不可自由交割货币的结算障碍。它保留远期汇率锁定的经济效果，但把本金交割改为可兑换货币的净额现金结算。</p>
         <p>NDF是用于受capital controls、convertibility restrictions或在岸市场准入限制影响货币的OTC远期。合约在fixing date比较约定NDF rate与指定reference spot rate，到期只以USD等freely convertible currency支付净差额；受限制货币的本金不发生实际交割。NDF并非“没有现金结算”，而是<strong>不交割受限制货币、只结算净现金差额</strong>。</p>
         <table class="quick-table">
@@ -867,25 +647,17 @@
           </tbody>
         </table>
         <p>NDF的对冲方向与普通远期相同：持有long foreign-currency asset并担心外币贬值，应sell the foreign currency forward and buy the base currency forward；未来需要支付外币并担心其升值，则应buy the foreign currency forward。NDF的特殊之处只在交割机制，并不改变远期合约的方向逻辑。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div>NDF：no delivery of the restricted currency；net cash settlement in a freely convertible currency。</div>
         <div>普通货币远期：到期实际交换两种货币本金。</div>
         <div>Long foreign-currency asset的对冲方向：sell foreign currency forward / buy base currency forward。</div>
         <div>NDF仍存在basis risk、fixing risk、counterparty risk以及rollover/liquidity risk。</div>
         <div>结算公式取决于汇率报价方向、notional currency、交易方向和settlement currency；必须先确认“一单位哪种货币对应多少单位哪种货币”，不能脱离单位死记公式。</div>
         <p class="english-recall">An NDF does not deliver the restricted currency; it settles only the net cash difference in a freely convertible currency.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="credit-spread-measures" data-subject="固定收益投资组合管理专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>信用利差衡量、信用曲线与Carry/Rolldown</strong></p>
+    <h2>信用利差衡量、信用曲线与Carry/Rolldown</h2>
         <p class="framework-note"><strong>上位框架：</strong>主动信用管理先用一致的spread measure比较相对价值，再把预期收益拆为carry、rolldown、利差变化和信用损失。衡量工具与收益来源必须分开：spread measure描述当前定价，return decomposition描述持有期结果。</p>
         <p>普通yield spread通常用债券YTM减去某只期限相近的benchmark government bond yield；若两只债券期限并不完全相同，就存在maturity mismatch。G-spread则在government benchmark yield curve上插值得到与公司债期限完全对应的government yield，再用公司债YTM减去该收益率。</p>
         <p>当government benchmark yield curve为flat时，各期限政府收益率相同，选择相近期限基准债还是进行精确期限插值都不会改变基准收益率，因此普通yield spread与G-spread相等。曲线向上或向下倾斜时，期限错配会使二者通常不同。</p>
@@ -894,10 +666,7 @@
         <p>OAS不是与模型无关的客观常数：利率模型、interest rate volatility、prepayment和option exercise等假设都会影响期权价值及OAS。OAS也是model-implied spread，并不保证最终实现；realized spread还取决于实际利率路径、波动率、期权执行或提前偿还、违约回收以及持有期交易价格。</p>
         <p><strong>主动信用策略：</strong>若当前信用利差定价合理，且未来信用曲线预计保持稳定，管理人缺少依靠利差方向或信用评级错价获得收益的理由，主要收益来源转为credit carry与credit curve rolldown。对于通常向上倾斜的信用曲线，期限较长、信用评级相近的债券一般提供较高的利差收入；随着剩余期限缩短，债券沿稳定曲线滚动至较低期限和较低利差位置，利差收窄会带来价格收益。</p>
         <p>保持相近信用评级，是为了主要表达期限和信用曲线观点，而不是同时改变信用质量。稳定曲线本身不必然保证正rolldown；若信用曲线平坦或倒挂，rolldown收益会较小或可能为负。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">Yield spread = Bond YTM − Yield on a selected comparable government bond</div>
         <div class="formula">G-spread = Bond YTM − Interpolated government yield at the bond's exact maturity</div>
         <div class="formula">I-spread = Bond YTM − Swap rate</div>
@@ -914,15 +683,10 @@
         <div><strong>预计利差收窄：</strong>可增加信用风险或spread duration；<strong>预计利差扩大：</strong>可降低信用风险、提高信用质量或买入CDS protection。</div>
         <div><strong>CDS方向：</strong>买入信用保护需要持续支付premium，主要在利差扩大或发生信用事件时受益，并非稳定利差环境下赚取carry的首选。</div>
         <p class="english-recall">OAS provides a consistent basis for comparing option-free bonds and securities with embedded options, but it remains model dependent.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="business-cycle-market-signals" data-subject="资产配置">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>经济周期（Business Cycle）的阶段与市场特征</strong></p>
+    <h2>经济周期（Business Cycle）的阶段与市场特征</h2>
         <p class="framework-note"><strong>上位框架：</strong>短期资本市场预期以经济周期为共同背景，把增长、通胀、政策、收益率曲线和信用利差联结起来。阶段识别依赖多项相互验证的指标，金融市场又常领先实体数据，因此不能依靠单一信号机械判断。</p>
         <p>CFA框架通常把经济周期划分为initial recovery、early expansion、late expansion、slowdown和contraction。周期阶段不是只由GDP增长率判断，而要综合观察经济增长相对于趋势的方向、产出缺口、通胀、货币政策、短期利率、收益率曲线和信用利差。金融市场具有前瞻性，因此市场变量的转折往往早于经济数据的确认。</p>
         <p><strong>Initial recovery：</strong>经济从低谷开始复苏，但产出仍低于潜在水平，通胀和政策利率较低，货币政策宽松。收益率曲线通常较陡，企业盈利预期改善，信用利差开始收窄；权益尤其是周期性资产往往率先受益。</p>
@@ -930,76 +694,49 @@
         <p><strong>Late expansion：</strong>经济运行高于趋势、产出缺口趋于正值，通胀压力增加，央行收紧政策。短期利率上升并接近高位，收益率曲线通常flatten，风险资产估值和信用状况对政策收紧变得更敏感。</p>
         <p><strong>Slowdown：</strong>经济仍可能增长，但增速开始下降；政策紧缩的滞后影响显现，短期利率通常在这一阶段附近见顶并随后下降。短端利率下降快于长端时，收益率曲线steepen；企业前景恶化使信用利差widen，防御性资产相对占优。</p>
         <p><strong>Contraction：</strong>经济活动下降、失业上升、盈利恶化，通胀压力通常减弱，央行进一步宽松。政府债券通常受益于利率下降，信用利差处于较宽水平；权益市场可能在经济数据仍疲弱时提前触底，因此不能机械地把经济阶段与同期资产收益一一对应。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>Initial recovery：</strong>增长转正但仍低于潜在水平；政策宽松；yield curve steep；credit spreads narrow；周期性权益领先。</div>
         <div><strong>Early expansion：</strong>增长加速；就业与盈利改善；短期利率可能开始上升；风险资产仍较强。</div>
         <div><strong>Late expansion：</strong>增长高于趋势；通胀上升；政策收紧；短期利率高或继续上升；yield curve flattens。</div>
         <div><strong>Slowdown：</strong>增长减速；短期利率见顶后下降；yield curve steepens；credit spreads widen。</div>
         <div><strong>Contraction：</strong>产出下降；失业上升；通胀与利率下降；政府债券相对受益；信用利差较宽。</div>
         <div><strong>判断顺序：</strong>先看增长方向与产出缺口，再用通胀、政策、收益率曲线和信用利差交叉确认；金融市场通常领先实体经济。</div>
-      </dd>
-    </dl>
   </article>
 
   <article id="forecasting-unusual-environments" data-subject="资产配置">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>异常经济环境下的预测与模型风险</strong></p>
+    <h2>异常经济环境下的预测与模型风险</h2>
         <p class="framework-note"><strong>上位框架：</strong>形成短期资本市场预期时，历史数据、经济模型和判断性调整必须相互校验。负利率、政策制度变化或结构性断点会削弱历史平均和估计参数的可迁移性，但不会消除模型风险。</p>
         <p>形成短期资本市场预期时，历史数据、历史平均值和量化模型都依赖一个共同前提：历史样本中的经济机制和变量关系对当前环境仍具有代表性。负利率、金融危机、重大政策制度变化等异常状态可能只在历史中出现过很少次数，甚至完全没有出现，因此可用于估计的独立经济周期有限，样本代表性和统计可靠性都会下降。</p>
         <p>预测者必须比较当前环境与模型估计或校准时期的差异。当前状态越偏离历史常态，历史平均值越不适合被机械外推；统计模型的参数关系也可能因structural change或regime shift而失效。模型在样本内稳定并不意味着在新的政策制度或极端市场状态下仍然稳定。</p>
         <p>CFA框架并非要求放弃量化模型，而是要求降低对单一历史关系的依赖，并结合经济逻辑、定性判断、情景分析和压力测试。预测结论还应清楚说明关键假设、模型适用范围以及异常环境带来的不确定性。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>历史样本：</strong>少数经济周期或缺少相似制度环境 → 估计误差和模型风险上升。</div>
         <div><strong>历史均值：</strong>当前环境越偏离历史常态，历史平均值的预测可靠性越低。</div>
         <div><strong>统计模型：</strong>当当前环境不同于模型的估计或校准环境时，模型关系可能变得不稳定，而不是自动保持稳定。</div>
         <div><strong>应对方法：</strong>经济逻辑与定性判断 + scenario analysis + stress testing + 明确模型假设和适用边界。</div>
         <p class="english-recall">Quantitative models may be unstable when current conditions differ materially from the environment in which the models were estimated or calibrated.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="credit-cycle-positioning" data-subject="固定收益投资组合管理专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>信用周期、信用曲线与评级相对价值</strong></p>
+    <h2>信用周期、信用曲线与评级相对价值</h2>
         <p class="framework-note"><strong>上位框架：</strong>信用周期把宏观增长阶段传导到企业基本面、违约概率、风险承受和不同评级利差。组合定位要区分利差的绝对水平、曲线斜率和评级间相对变化，而不是只判断“利差会上升还是下降”。</p>
         <p>在经济周期顶部，高评级发行人的近期违约风险通常仍然较低，但市场开始计入未来经济放缓和长期信用不确定性，长期信用利差可能相对于短期信用利差扩大，因此高评级发行人的credit spread curve通常steepen。低评级或distressed发行人若近期违约风险特别高，其短期利差可能高于长期利差，信用曲线更容易flatten或invert。</p>
         <p>经济增长周期接近尾声时，high-yield issuers通常比investment-grade issuers更容易受到经济恶化和违约风险上升的影响，因此HY spreads可能相对IG spreads扩大。可使用相同tenor买入HY指数保护并卖出IG指数保护，主要表达信用质量的相对观点，而不是期限观点。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>经济周期顶部＋高评级发行人：</strong>长期利差相对短期利差扩大 → credit spread curve steepens。</div>
         <div><strong>低评级或distressed发行人：</strong>近期违约风险可能主导 → 信用曲线更容易flatten或invert。</div>
         <div><strong>增长周期接近尾声：</strong>买入相同tenor的HY protection＋卖出IG protection。</div>
         <div><strong>区分：</strong>同一发行人或指数、不同tenor → 信用曲线交易；不同评级、相同tenor → 信用质量相对交易。</div>
         <p class="english-recall">At the end of a growth cycle, high-yield spreads are generally more vulnerable than investment-grade spreads.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="credit-expected-excess-return" data-subject="固定收益投资组合管理专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>信用债预期超额收益（Expected Excess Return）</strong></p>
+    <h2>信用债预期超额收益（Expected Excess Return）</h2>
         <p class="framework-note"><strong>上位框架：</strong>信用债相对无风险债券的持有期超额收益来自利差收入，扣除利差变动造成的价格影响和预期信用损失。所有输入必须先统一到同一持有期。</p>
         <p>在spread duration近似不变并忽略高阶影响时，预期超额收益来自三部分：OAS提供的spread income、利差变化的价格效应，以及需要扣除的预期信用损失。</p>
         <p>利差收窄产生价格收益，利差扩大产生价格损失；OAS高不代表预期超额收益一定更高，还要考虑POD、LGD和预期利差变化。</p>
         <p><strong>持有期不足一年时：</strong>若OAS和POD以annualized形式给出，应按持有期比例缩放；若题目已经直接给出该持有期内预计发生的spread change，则该变动不再乘持有期。以六个月为例，h = 0.5，annualized carry与annualized POD均乘0.5，但“未来六个月利差上升50 bps”直接使用50 bps。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">Expected loss = POD × LGD</div>
         <div class="formula">Expected excess return ≈ OAS − (Effective spread duration × ΔOAS) − (POD × LGD)</div>
         <div class="formula">Holding-period expected excess return ≈ (Annualized OAS × h) − (Effective spread duration × ΔOAS<sub>H</sub>) − (Annualized POD × h × LGD)</div>
@@ -1007,63 +744,39 @@
         <div><strong>符号：</strong>ΔOAS &lt; 0（利差收窄）→ −Spread Duration × ΔOAS &gt; 0（价格收益）；ΔOAS &gt; 0（利差扩大）→ 价格损失。</div>
         <div><strong>排错：</strong>比较信用类别时不能只看OAS；各项必须使用一致单位。不要把题目已经给定的持有期spread change再次乘以h。</div>
         <p class="english-recall">For a subannual horizon, scale annualized carry and expected loss—not a spread change already forecast for that horizon.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="credit-index-downside-hedge" data-subject="固定收益投资组合管理专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>信用指数衍生品的下行保护</strong></p>
+    <h2>信用指数衍生品的下行保护</h2>
         <p class="framework-note"><strong>上位框架：</strong>信用组合对冲要先区分系统性spread risk与单一发行人风险。指数保护适合快速降低共同信用beta，但会留下basis risk，并以premium和roll yield牺牲部分carry。</p>
         <p>买入CDX、iTraxx等信用指数保护可以降低组合的系统性信用风险，但需要支付premium并产生negative carry，从而降低组合长期赚取的净excess spread。指数对冲不会改变底层个券权重，因此不一定降低发行人集中度，且可能使剩余风险更加偏向个券特有风险。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>买入指数保护：</strong>系统性信用风险下降，但premium和展期成本会侵蚀excess spread。</div>
         <div><strong>困境市场：</strong>利差、波动率及保护需求通常上升，临时建立对冲往往更昂贵，而不是更便宜。</div>
         <div><strong>排错：</strong>指数对冲不等于降低底层持仓集中度。</div>
         <p class="english-recall">Buying index protection reduces systematic credit exposure but lowers the portfolio's excess spread through the protection premium and roll cost.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="cds-standard-coupon-upfront" data-subject="固定收益投资组合管理专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>CDS：Standard Coupon与Upfront Payment</strong></p>
+    <h2>CDS：Standard Coupon与Upfront Payment</h2>
         <p class="framework-note"><strong>上位框架：</strong>标准化CDS把持续支付固定为标准coupon，并通过期初upfront把合同调整到市场价值为零。方向判断必须同时区分protection buyer/seller和market spread相对standard coupon的高低。</p>
         <p>买入CDS protection相当于做空信用；卖出protection相当于做多信用。标准化CDS使用固定coupon，当market CDS spread与standard coupon不同时，通过期初upfront payment使合约初始价值归零。</p>
         <p>卖出protection的一方持续收取coupon，但若standard coupon高于公平的market spread，则收到的coupon过多，因此保护卖方必须在期初向保护买方支付upfront。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">保护卖方的upfront ≈ (Market CDS spread − Standard coupon) × Effective spread duration × Notional</div>
         <div><strong>Market spread &gt; standard coupon：</strong>保护卖方收取upfront。</div>
         <div><strong>Market spread &lt; standard coupon：</strong>保护卖方支付upfront。</div>
         <div><strong>常见standard coupon：</strong>investment-grade CDS通常为1%，high-yield CDS通常为5%。</div>
         <div><strong>易错点：</strong>不要把持续coupon的收取方向与期初upfront的收付方向混淆。</div>
         <p class="english-recall">When the market CDS spread is below the standard coupon, the protection seller pays an upfront amount because the contractual coupon is above market.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="cds-credit-curve-trades" data-subject="固定收益投资组合管理专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>CDS信用曲线交易与期限中性</strong></p>
+    <h2>CDS信用曲线交易与期限中性</h2>
         <p class="framework-note"><strong>上位框架：</strong>信用曲线交易不是单纯做多或做空信用，而是交易不同tenor利差的相对变化。通过spread-duration neutrality尽量消除平行移动后，剩余收益主要来自曲线steepening或flattening。</p>
         <p>买入CDS protection相当于做空信用，主要在利差扩大时获利；卖出protection相当于做多信用，收取premium并在利差收窄或保持稳定时受益。信用曲线交易应同时操作短端和长端，并尽量使用同一reference entity或同一subindex，以主要表达曲线斜率观点。</p>
         <p><strong>Spread-duration-neutral：</strong>长短两腿不能简单使用相同notional，而应使两腿的“notional × effective spread duration”相等。这样可以尽量消除信用利差整体平行移动的影响，使收益主要来自短端与长端利差变化幅度的差异。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>Credit curve steepener：</strong>卖出短期保护＋买入长期保护。</div>
         <div><strong>Credit curve flattener：</strong>买入短期保护＋卖出长期保护。</div>
         <div class="formula">期限中性配平：N<sub>S</sub> × SD<sub>S</sub> = N<sub>L</sub> × SD<sub>L</sub></div>
@@ -1074,47 +787,31 @@
         <div><strong>识别：</strong>同一发行人或指数、不同tenor，并同时操作两端 → 信用曲线斜率交易。</div>
         <div><strong>排错：</strong>只做单腿会混入整体信用利差方向风险，不能干净地隔离曲线斜率。</div>
         <p class="english-recall">A duration-neutral curve trade equates notional times effective spread duration across the short- and long-tenor legs.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="structured-credit-positioning" data-subject="固定收益投资组合管理专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Covered bond、ABS、CLO与CDO的组合定位</strong></p>
+    <h2>Covered bond、ABS、CLO与CDO的组合定位</h2>
         <p class="framework-note"><strong>上位框架：</strong>结构化信用产品的相对价值取决于基础资产、法律追索权、现金流重设方式和tranche损失顺序。产品名称只是入口，真正决定风险的是现金流瀑布与信用增级结构。</p>
         <p><strong>Covered bond：</strong>担保资产通常保留在发行人的资产负债表内，投资者既可向发行人追索，也可向独立的cover pool追索，因此具有dual recourse。相对于一般ABS，其信用风险和收益率通常更低。</p>
         <p><strong>ABS：</strong>投资者主要依赖SPV中抵押资产池产生的现金流，信用风险取决于基础资产质量、结构性增信和tranche的偿付顺序。</p>
         <p><strong>CLO与CDO：</strong>CLO主要以通常采用浮动利率的leveraged loans为基础资产，短期利率上升时资产端利息收入会较快向上重设；CDO可由固定利率公司债券等信用资产构成，因此CLO通常比CDO更能受益于短期利率上升。实际效果仍取决于负债端重设、资产负债利差和违约情况。</p>
         <p><strong>经济周期定位：</strong>经济下行时违约率和信用损失通常上升，lower-rated或subordinated tranches先吸收损失，应偏向senior、higher-rated tranches并降低次级信用敞口；经济改善、违约率下降时，低评级tranche的回报潜力较高。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>Covered bond：</strong>dual recourse → 通常信用风险较低、收益率较低。</div>
         <div><strong>短期利率上升：</strong>CLO因浮动利率贷款占主导，通常比以固定利率信用资产为主的CDO更受益。</div>
         <div><strong>经济下行：</strong>增持senior / higher-rated tranches，减持lower-rated / subordinated tranches。</div>
         <div><strong>经济改善：</strong>lower-rated tranches可能因信用损失下降而获得更高回报。</div>
         <p class="english-recall">CLO tranches generally benefit more from rising short-term rates than CDO tranches because CLO assets are predominantly floating-rate leveraged loans.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="futures-asset-rebalancing" data-subject="衍生品与风险管理">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>利用股指期货和债券期货调整资产配置</strong></p>
+    <h2>利用股指期货和债券期货调整资产配置</h2>
         <p class="framework-note"><strong>上位框架：</strong>衍生品overlay用少量初始现金快速改变组合的系统性敞口。股票期货匹配beta exposure，债券期货匹配BPV；二者不能用同一套名义金额公式机械处理。</p>
         <p>期货overlay可以在不立即买卖现货资产的情况下改变股票和债券的经济敞口。先用“目标权重−当前权重”乘以组合价值，得到需要增加或减少的名义敞口；增加敞口时买入期货，减少敞口时卖出期货。</p>
         <p><strong>股票端使用beta匹配：</strong>股指期货合约价值等于期货价格乘以合约乘数。调整股票配置时，需要同时考虑被调整股票资产的beta和期货beta；若直接调整整个组合beta，则使用目标组合beta与当前组合beta之差。</p>
         <p><strong>债券端使用BPV匹配：</strong>先把待调整的债券名义金额转换为目标BPV，再除以每份债券期货的BPV。债券期货由最便宜可交割债券（CTD）决定价格敏感度，每份期货的BPV等于CTD的BPV除以conversion factor。</p>
         <p>计算股指期货合约价值时应使用<strong>期货价格</strong>，而非现货指数水平。债券端一旦已经使用每份期货BPV进行匹配，就不应再次乘除期货价格或合约乘数。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div>设组合价值为V<sub>P</sub>，权重变化为Δw，股指期货价格为F<sub>0</sub>，合约乘数为Q，股票和期货beta分别为β<sub>E</sub>与β<sub>F</sub>。</div>
         <div class="formula">股指期货合约价值 V<sub>F</sub> = F<sub>0</sub> × Q</div>
         <div class="formula">调整股票配置：N<sub>E</sub> = Δw × V<sub>P</sub> × β<sub>E</sub> / (V<sub>F</sub> × β<sub>F</sub>)</div>
@@ -1125,45 +822,29 @@
         <div class="formula">债券期货合约数 N<sub>B</sub> = 目标BPV / 每份债券期货BPV</div>
         <div><strong>方向：</strong>N为正表示买入期货，N为负表示卖出期货。增加股票或债券敞口时买入相应期货；减少敞口时卖出。</div>
         <p class="english-recall">Use beta for equity futures and BPV for bond futures; bond-futures BPV reflects the CTD bond and conversion factor.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="portfolio-vs-dollar-krd" data-subject="固定收益投资组合管理专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Portfolio Key Rate Duration与Dollar Key Rate Duration</strong></p>
+    <h2>Portfolio Key Rate Duration与Dollar Key Rate Duration</h2>
         <p class="framework-note"><strong>上位框架：</strong>固定收益利率风险可分为平行移动风险和收益率曲线形状风险。总体duration概括平行移动，key rate durations把敏感度分配到关键期限点；百分比口径与货币口径服务于不同的比较和对冲任务。</p>
         <p>Portfolio KRD衡量组合价值对某一关键期限利率变化的百分比敏感度，应使用该期限头寸占组合总市值的权重乘以相应duration。Dollar KRD衡量同一利率变化带来的货币价值敏感度，使用该期限持仓市值乘以duration。比较不同规模组合的portfolio KRD时，必须分别按各组合总市值标准化；两个组合在某期限持有相同美元金额，并不代表其portfolio KRD相同。</p>
         <p>各关键期限KRD之和通常等于组合对平行利率变动的总duration。主动组合相对于基准的某期限利率风险，应比较二者在该期限的portfolio KRD之差，而不能只比较原始持仓金额。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">Portfolio KRD<sub>i</sub> = w<sub>i</sub> × D<sub>i</sub> = (MV<sub>i</sub>/MV<sub>P</sub>) × D<sub>i</sub></div>
         <div class="formula">Dollar KRD<sub>i</sub> = MV<sub>i</sub> × D<sub>i</sub></div>
         <div class="formula">Active KRD<sub>i</sub> = Portfolio KRD<sub>i</sub> − Benchmark KRD<sub>i</sub></div>
         <div class="formula">Σ KRD<sub>i</sub> ≈ Portfolio duration</div>
         <div>跨组合比较百分比利率敏感度 → 使用Portfolio KRD并先按各自总市值标准化；比较货币金额敏感度 → 使用Dollar KRD。</div>
         <p class="english-recall">Portfolio KRD is a percentage sensitivity normalized by portfolio value; dollar KRD is the corresponding monetary sensitivity.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="bond-rolldown-return" data-subject="固定收益投资组合管理专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Rolldown Return与债券预期收益分解</strong></p>
+    <h2>Rolldown Return与债券预期收益分解</h2>
         <p class="framework-note"><strong>上位框架：</strong>债券持有期收益应区分coupon income、rolldown、预期收益率变化和信用影响。Rolldown是“曲线不变但债券期限缩短”的机械价格效应，不是对未来曲线移动的预测。</p>
         <p>Rolldown return是指假设收益率曲线的形状和水平保持不变，债券随着时间经过、剩余期限缩短而产生的价格回报。计算时先在“稳定收益率曲线”上找到持有期末、以更短剩余期限定价的债券价格，再与期初价格比较。在正常向上倾斜的曲线上，债券通常会滚动到较低收益率的期限点，从而获得价格上涨；折价债券还会随着到期日接近而向面值收敛。若收益率曲线倒挂，rolldown可能为负。</p>
         <p>Rolldown不是管理人对未来收益率变化的预测，而是“曲线完全不变”情形下的基准价格变化。得到稳定曲线下的持有期末价格后，再用持有期末的duration和convexity，根据管理人预测的收益率变动调整该价格。Coupon bond的总持有期收益还应加入期间收到的coupon；zero-coupon bond没有coupon，其稳定曲线价格变化就是主要的carry/rolldown来源。国际债券投资最后还要加入汇率回报。</p>
         <p>比较bullet与barbell时，barbell通常具有更高convexity，但总收益还取决于各自的rolldown和初始估值。若bullet的stable-curve return优势大于barbell的额外convexity收益，bullet仍可能具有更高预期回报。因此，更高convexity不等于更高总回报。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">Rolldown price return = (P<sub>H,stable curve</sub> − P<sub>0</sub>)/P<sub>0</sub></div>
         <div class="formula">P<sub>H,forecast</sub> ≈ P<sub>H,stable curve</sub>[1 − D<sub>H</sub>Δy + ½C<sub>H</sub>(Δy)<sup>2</sup>]</div>
         <div class="formula">Local-currency holding-period return = (P<sub>H,forecast</sub> − P<sub>0</sub> + Coupon income)/P<sub>0</sub></div>
@@ -1171,73 +852,45 @@
         <div><strong>计算顺序：</strong>稳定曲线下的期末价格与rolldown → duration/convexity调整收益率观点 → 加coupon → 加汇率回报。</div>
         <div><strong>判断：</strong>预期利率波动率上升时偏好高正凸性；比较特定持有期的预期总收益时，必须同时比较rolldown、duration、convexity、coupon和currency effects。</div>
         <p class="english-recall">Rolldown return is the price return generated as a bond ages along an unchanged yield curve; it is not a forecast of a curve shift.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="portfolio-overlays" data-subject="投资组合构建">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Completion overlay、Rebalancing overlay与Cash equitization</strong></p>
+    <h2>Completion overlay、Rebalancing overlay与Cash equitization</h2>
         <p class="framework-note"><strong>上位框架：</strong>Overlay management把资产选择与组合总风险控制分离，由中央层使用衍生品修正底层管理人组合无法高效处理的政策权重、风险因子或现金敞口。</p>
         <p>Completion overlay通过期货、互换等工具补足现有组合相对于基准缺失的风险敞口，并抵消不希望承担的主动风险，使整体风险属性更接近基准、降低tracking error。Rebalancing overlay用于纠正股票、债券等资产类别相对于战略或政策资产配置权重的漂移。Cash equitization则使暂时持有的现金获得目标市场敞口，从而减少cash drag；它通常适用于现金问题本身，而不一定修复更广泛的行业、风格或因子偏离。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>Completion overlay：</strong>风险属性偏离benchmark、存在未预期主动风险、要求降低tracking error。</div>
         <div><strong>Rebalancing overlay：</strong>实际asset-class weights偏离战略或policy weights。</div>
         <div><strong>Cash equitization：</strong>暂时性现金造成cash drag，需要用股指期货等获得市场敞口。</div>
         <div>若大量现金已使组合整体风险属性显著偏离基准，应优先从completion overlay角度处理；若仅是暂时性现金敞口不足，则使用cash equitization。</div>
         <p class="english-recall">Completion fixes risk exposures; rebalancing restores policy weights; cash equitization removes cash drag.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="effective-spread" data-subject="交易策略与执行专业课程">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Effective spread衡量实际成交价格相对于当时midquote的隐含往返交易成本。</strong>先用bid与ask计算midquote，再取成交价与midquote之差的绝对值并乘以2。多笔成交的规模不同时，应按shares executed加权，不能直接对各笔spread做简单平均。</p>
+    <h2>Effective Spread与多笔成交加权</h2>
+        <p>Effective spread衡量实际成交价格相对于当时midquote的隐含往返交易成本。先用bid与ask计算midquote，再取成交价与midquote之差的绝对值并乘以2。多笔成交的规模不同时，应按shares executed加权，不能直接对各笔spread做简单平均。</p>
         <p class="framework-note"><strong>上位框架：</strong>交易成本评价区分quoted spread、effective spread、realized spread、price impact和基于benchmark的总成本。Effective spread只评价成交当刻相对midquote的价格改善或损失，不等于完整implementation shortfall。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div class="formula">Midquote = (Bid + Ask) / 2</div>
         <div class="formula">Effective spread<sub>i</sub> = 2 × |Execution price<sub>i</sub> − Midquote<sub>i</sub>|</div>
         <div class="formula">Weighted average effective spread = Σ(Shares<sub>i</sub> × Effective spread<sub>i</sub>) / ΣShares<sub>i</sub></div>
         <div><strong>易错点：</strong>|Execution price − Midquote|只是half-spread；effective spread必须再乘以2。</div>
         <p class="english-recall">Effective spread is twice the absolute difference between the execution price and the prevailing midquote.</p>
-      </dd>
-    </dl>
   </article>
 
   <article id="market-manipulation" data-subject="职业伦理与专业行为标准">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
-        <p><strong>Wash trading、Spoofing与Trading for market impact</strong></p>
+    <h2>Wash trading、Spoofing与Trading for market impact</h2>
         <p class="framework-note"><strong>上位框架：</strong>这些行为属于Standard II(B) Market Manipulation。判断核心不是订单是否最终成交，而是行为是否意图扭曲价格或成交量、制造虚假的市场信息；完整准则与题目行为记录见独立伦理笔记。</p>
         <p>Wash trading是通过同一实际控制人名下的不同账户相互买卖，制造虚假成交量、市场活跃度或特定价格存在真实供需的假象，交易通常不产生实质性的受益所有权变化。Spoofing是提交无意成交的订单以制造虚假买卖压力，并在成交前撤单。Trading for market impact则是通过真实交易故意推动或影响市场价格，以使其他头寸、估值或后续交易获利。</p>
         <p>完整的 Code and Standards 框架及逐题行为记录保存在 <a href="CFA_Level_III_Ethics_Question_Notes.md">CFA Level III Ethics Question Notes</a>；本页只保留适合跨题迁移的概念辨析。</p>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <div><strong>Wash trading：</strong>关联账户互相成交 → 虚假成交量或活跃度 → 实质受益所有权不变。</div>
         <div><strong>Spoofing：</strong>无意成交的虚假挂单 → 诱导市场反应 → 成交前撤单。</div>
         <div><strong>Trading for market impact：</strong>进行真实交易 → 故意推动或影响价格。</div>
         <p class="english-recall">Layering or spoofing uses non-bona-fide orders that are intended to be canceled; wash trading uses offsetting trades under common control to create false activity.</p>
-      </dd>
-    </dl>
   </article>
 
   <article class="option-guide" id="option-strategies" data-subject="衍生品与风险管理">
-    <dl>
-      <dt>知识点</dt>
-      <dd>
         <h2>CFA Level III 组合期权策略</h2>
         <p class="framework-note"><strong>上位框架：</strong>组合期权把方向、波动率、下行保护、上行让渡和premium budget同时映射到payoff。选策略时应先确定投资者持有的基础敞口和目标，再选择期权腿；不能只凭策略名称或单一市场观点。</p>
         <div class="scope-note">范围按CFA Level III核心 Options Strategies：合成头寸、covered call、protective put、risk reversal、put spread collar / seagull、bull spread、bear spread、straddle、collar及calendar spread。损益图均为示意图，纵轴为到期利润；calendar spread因到期日不同，图示的是近月期权到期时的典型组合价值。</div>
@@ -1369,10 +1022,7 @@
             </div>
           </div>
         </section>
-      </dd>
 
-      <dt>核心公式或结论</dt>
-      <dd>
         <table class="quick-table">
           <thead><tr><th>策略</th><th>组成</th><th>核心观点</th><th>收益／风险轮廓</th></tr></thead>
           <tbody>
@@ -1399,8 +1049,6 @@
           <div class="formula">Long straddle profit = |S<sub>T</sub> − K| − D</div>
           <div class="formula">Collar profit = S<sub>T</sub> − S<sub>0</sub> + max(K<sub>P</sub> − S<sub>T</sub>, 0) − max(S<sub>T</sub> − K<sub>C</sub>, 0) − P + C</div>
         </div>
-      </dd>
-    </dl>
   </article>
 
   </main>

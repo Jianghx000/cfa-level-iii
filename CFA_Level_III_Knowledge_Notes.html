@@ -114,6 +114,19 @@
       border-radius: 10px;
       background: #ffffff;
     }
+    article[data-subject]::before {
+      content: attr(data-subject);
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      color: #0f5f52;
+      background: #dff2eb;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.035em;
+      text-transform: uppercase;
+    }
     dt {
       margin-top: 14px;
       color: #536b62;
@@ -125,6 +138,14 @@
       margin: 8px 0;
       font-family: Cambria, "Times New Roman", serif;
       font-size: 1.06rem;
+    }
+    .english-recall {
+      margin: 10px 0 0;
+      padding: 9px 12px;
+      border-left: 3px solid #0f766e;
+      color: #173f35;
+      background: #eef8f4;
+      font-weight: 650;
     }
     h2, h3 { color: #173f35; line-height: 1.35; }
     h2 { margin: 10px 0 14px; font-size: 1.45rem; }
@@ -206,79 +227,44 @@
   <aside class="toc" id="pageToc" aria-label="页面目录">
     <a class="toc-title" href="#top">CFA Level III 知识笔记</a>
     <nav>
-      <a href="#singer-terhaar">Singer–Terhaar 模型</a>
-      <a href="#goals-discount-rate">目标成功概率与折现率</a>
-      <a href="#asset-class-specification">资产类别划分标准</a>
-      <a href="#private-wealth-definitions">私人财富口径与经济资产负债表</a>
-      <a href="#institutional-investment-models">机构投资模式</a>
-      <a href="#bank-equity-duration">银行权益资本的利率敏感度</a>
-      <a href="#pension-abo-pbo">养老金负债：ABO与PBO</a>
-      <a href="#quantitative-vs-fundamental">Active：Fundamental、Quantitative与Hybrid</a>
-      <a href="#active-management-two-dimensions">Systematic/Discretionary × Bottom-up/Top-down</a>
-      <a href="#index-vs-active-factor">Index-Based与Active Factor Strategies</a>
-      <a href="#long-short-vs-long-only">Long–Short与Long-Only</a>
-      <a href="#risk-contribution">边际、绝对与相对风险贡献</a>
-      <a href="#tax-treatment">不同收益来源的税收待遇</a>
-      <a href="#sma-vs-pooled-vehicle">SMA与集合投资工具的税务选择</a>
-      <a href="#currency-risk-premium">风险溢价与货币价值</a>
-      <a href="#macro-vs-micro-hedge">宏观对冲与微观对冲</a>
-      <a href="#macro-vs-micro-attribution">Macro与Micro业绩归因</a>
-      <a href="#brinson-attribution-models">BHB与Brinson–Fachler模型</a>
-      <a href="#benchmark-misfit-return">Normal Portfolio与Misfit Return</a>
-      <a href="#manager-selection-errors">经理筛选中的Type I与Type II Error</a>
-      <a href="#gips-seed-portfolios">GIPS：Seed Money Portfolios</a>
-      <a href="#gips-terminated-portfolios">GIPS：Terminated Portfolios</a>
-      <a href="#gips-performance-history">GIPS：业绩展示年限</a>
-      <a href="#modified-dietz-return">Modified Dietz与Modified IRR</a>
-      <a href="#private-equity-irr-moic">Private Equity：IRR与MOIC</a>
-      <a href="#private-equity-nav-forecast">Private Equity：NAV预测</a>
-      <a href="#cross-currency-basis-swap">交叉货币基差互换</a>
-      <a href="#non-deliverable-forward">NDF与普通货币远期</a>
-      <a href="#credit-spread-measures">信用利差衡量、曲线与Carry/Rolldown</a>
-      <a href="#business-cycle-market-signals">经济周期：阶段与市场特征</a>
-      <a href="#forecasting-unusual-environments">异常经济环境下的预测与模型风险</a>
-      <a href="#credit-cycle-positioning">信用周期与评级相对价值定位</a>
-      <a href="#credit-expected-excess-return">信用债预期超额收益</a>
-      <a href="#credit-index-downside-hedge">信用指数衍生品的下行保护</a>
-      <a href="#cds-standard-coupon-upfront">CDS：Standard Coupon与Upfront Payment</a>
-      <a href="#cds-credit-curve-trades">CDS信用曲线交易与期限中性</a>
-      <a href="#structured-credit-positioning">结构化信用产品的组合定位</a>
-      <a href="#futures-asset-rebalancing">期货调整资产配置</a>
-      <a href="#portfolio-vs-dollar-krd">Portfolio KRD与Dollar KRD</a>
-      <a href="#bond-rolldown-return">Rolldown Return与债券预期收益</a>
-      <a href="#portfolio-overlays">Completion、Rebalancing与Cash Equitization</a>
-      <a href="#effective-spread">Effective Spread与多笔成交加权</a>
-      <a href="#market-manipulation">市场操纵行为辨析</a>
-      <div class="toc-group" data-toc-group>
-        <div class="toc-group-row">
-          <a href="#option-strategies">组合期权策略</a>
-          <button class="toc-group-toggle" type="button" aria-expanded="false" aria-controls="toc-option-items" aria-label="展开组合期权策略子目录"><span aria-hidden="true">▶</span></button>
-        </div>
-        <div class="toc-children" id="toc-option-items" hidden>
-          <a class="level-2" href="#opt-synthetic">一、合成头寸</a>
-          <a class="level-3" href="#opt-parity">Put–Call Parity</a>
-          <a class="level-2" href="#opt-underlying">二、标的资产＋期权</a>
-          <a class="level-3" href="#opt-covered-call">Covered Call</a>
-          <a class="level-3" href="#opt-protective-put">Protective Put</a>
-          <a class="level-3" href="#opt-collar">Collar</a>
-          <a class="level-2" href="#opt-risk-reversal-section">三、方向性期权组合</a>
-          <a class="level-3" href="#opt-risk-reversal">Risk Reversal</a>
-          <a class="level-3" href="#opt-seagull">Put Spread Collar / Seagull</a>
-          <a class="level-2" href="#opt-spreads">四、同到期价差</a>
-          <a class="level-3" href="#opt-bull-spread">Bull Spread</a>
-          <a class="level-3" href="#opt-bear-spread">Bear Spread</a>
-          <a class="level-2" href="#opt-volatility">五、波动率与期限结构</a>
-          <a class="level-3" href="#opt-straddle">Straddle</a>
-          <a class="level-3" href="#opt-calendar">Calendar Spread</a>
-        </div>
-      </div>
+      <div class="toc-group" data-toc-group><div class="toc-group-row"><a href="#singer-terhaar">资产配置</a><button class="toc-group-toggle" type="button" aria-expanded="true" aria-controls="toc-aa" aria-label="展开资产配置目录"><span aria-hidden="true">▶</span></button></div><div class="toc-children" id="toc-aa">
+        <a class="level-2" href="#singer-terhaar">Singer–Terhaar 模型</a><a class="level-2" href="#goals-discount-rate">目标成功概率与折现率</a><a class="level-2" href="#asset-class-specification">资产类别划分标准</a><a class="level-2" href="#business-cycle-market-signals">经济周期与市场特征</a><a class="level-2" href="#forecasting-unusual-environments">异常环境下的预测</a><a class="level-2" href="#currency-risk-premium">风险溢价与货币价值</a>
+      </div></div>
+      <div class="toc-group" data-toc-group><div class="toc-group-row"><a href="#risk-contribution">投资组合构建与风险管理</a><button class="toc-group-toggle" type="button" aria-expanded="false" aria-controls="toc-pc" aria-label="展开投资组合构建目录"><span aria-hidden="true">▶</span></button></div><div class="toc-children" id="toc-pc" hidden>
+        <a class="level-2" href="#risk-contribution">风险贡献</a><a class="level-2" href="#bank-equity-duration">银行权益资本的利率敏感度</a><a class="level-2" href="#pension-abo-pbo">养老金负债：ABO与PBO</a><a class="level-2" href="#futures-asset-rebalancing">期货调整资产配置</a><a class="level-2" href="#portfolio-vs-dollar-krd">Portfolio KRD与Dollar KRD</a><a class="level-2" href="#portfolio-overlays">Portfolio overlays</a>
+      </div></div>
+      <div class="toc-group" data-toc-group><div class="toc-group-row"><a href="#private-wealth-definitions">私人财富与机构投资者</a><button class="toc-group-toggle" type="button" aria-expanded="false" aria-controls="toc-pw" aria-label="展开私人财富与机构目录"><span aria-hidden="true">▶</span></button></div><div class="toc-children" id="toc-pw" hidden>
+        <a class="level-2" href="#private-wealth-definitions">私人财富与经济资产负债表</a><a class="level-2" href="#institutional-investment-models">机构投资模式</a><a class="level-2" href="#tax-treatment">收益来源的税收待遇</a><a class="level-2" href="#sma-vs-pooled-vehicle">SMA与pooled vehicle</a>
+      </div></div>
+      <div class="toc-group" data-toc-group><div class="toc-group-row"><a href="#quantitative-vs-fundamental">权益投资组合管理</a><button class="toc-group-toggle" type="button" aria-expanded="false" aria-controls="toc-equity" aria-label="展开权益目录"><span aria-hidden="true">▶</span></button></div><div class="toc-children" id="toc-equity" hidden>
+        <a class="level-2" href="#quantitative-vs-fundamental">Fundamental、Quantitative与Hybrid</a><a class="level-2" href="#active-management-two-dimensions">Systematic/Discretionary × Bottom-up/Top-down</a><a class="level-2" href="#index-vs-active-factor">Index-based与Active Factor Strategies</a><a class="level-2" href="#long-short-vs-long-only">Long–Short与Long-Only</a>
+      </div></div>
+      <div class="toc-group" data-toc-group><div class="toc-group-row"><a href="#credit-spread-measures">固定收益投资组合管理</a><button class="toc-group-toggle" type="button" aria-expanded="false" aria-controls="toc-fi" aria-label="展开固定收益目录"><span aria-hidden="true">▶</span></button></div><div class="toc-children" id="toc-fi" hidden>
+        <a class="level-2" href="#credit-spread-measures">信用利差衡量与Carry/Rolldown</a><a class="level-2" href="#credit-cycle-positioning">信用周期与评级相对价值</a><a class="level-2" href="#credit-expected-excess-return">信用债预期超额收益</a><a class="level-2" href="#credit-index-downside-hedge">信用指数下行保护</a><a class="level-2" href="#cds-standard-coupon-upfront">CDS Standard Coupon与Upfront</a><a class="level-2" href="#cds-credit-curve-trades">CDS信用曲线交易</a><a class="level-2" href="#structured-credit-positioning">结构化信用产品</a><a class="level-2" href="#bond-rolldown-return">Bond rolldown return</a>
+      </div></div>
+      <div class="toc-group" data-toc-group><div class="toc-group-row"><a href="#macro-vs-micro-hedge">衍生品与货币风险管理</a><button class="toc-group-toggle" type="button" aria-expanded="false" aria-controls="toc-deriv" aria-label="展开衍生品目录"><span aria-hidden="true">▶</span></button></div><div class="toc-children" id="toc-deriv" hidden>
+        <a class="level-2" href="#macro-vs-micro-hedge">Macro与Micro hedge</a><a class="level-2" href="#cross-currency-basis-swap">Cross-currency basis swap</a><a class="level-2" href="#non-deliverable-forward">NDF与普通货币远期</a>
+        <div class="toc-group" data-toc-group><div class="toc-group-row"><a class="level-2" href="#option-strategies">组合期权策略</a><button class="toc-group-toggle" type="button" aria-expanded="false" aria-controls="toc-option-items" aria-label="展开组合期权策略子目录"><span aria-hidden="true">▶</span></button></div><div class="toc-children" id="toc-option-items" hidden>
+          <a class="level-3" href="#opt-parity">Put–Call Parity</a><a class="level-3" href="#opt-covered-call">Covered Call</a><a class="level-3" href="#opt-protective-put">Protective Put</a><a class="level-3" href="#opt-collar">Collar</a><a class="level-3" href="#opt-risk-reversal">Risk Reversal</a><a class="level-3" href="#opt-seagull">Put Spread Collar / Seagull</a><a class="level-3" href="#opt-bull-spread">Bull Spread</a><a class="level-3" href="#opt-bear-spread">Bear Spread</a><a class="level-3" href="#opt-straddle">Straddle</a><a class="level-3" href="#opt-calendar">Calendar Spread</a>
+        </div></div>
+      </div></div>
+      <div class="toc-group" data-toc-group><div class="toc-group-row"><a href="#macro-vs-micro-attribution">业绩衡量与归因</a><button class="toc-group-toggle" type="button" aria-expanded="false" aria-controls="toc-perf" aria-label="展开业绩衡量目录"><span aria-hidden="true">▶</span></button></div><div class="toc-children" id="toc-perf" hidden>
+        <a class="level-2" href="#macro-vs-micro-attribution">Macro与Micro attribution</a><a class="level-2" href="#brinson-attribution-models">BHB与Brinson–Fachler</a><a class="level-2" href="#benchmark-misfit-return">Normal Portfolio与Misfit Return</a><a class="level-2" href="#manager-selection-errors">Type I与Type II Error</a><a class="level-2" href="#modified-dietz-return">Modified Dietz与Modified IRR</a><a class="level-2" href="#private-equity-irr-moic">Private Equity：IRR与MOIC</a><a class="level-2" href="#private-equity-nav-forecast">Private Equity：NAV预测</a>
+      </div></div>
+      <div class="toc-group" data-toc-group><div class="toc-group-row"><a href="#gips-seed-portfolios">GIPS</a><button class="toc-group-toggle" type="button" aria-expanded="false" aria-controls="toc-gips" aria-label="展开GIPS目录"><span aria-hidden="true">▶</span></button></div><div class="toc-children" id="toc-gips" hidden>
+        <a class="level-2" href="#gips-seed-portfolios">Seed Money Portfolios</a><a class="level-2" href="#gips-terminated-portfolios">Terminated Portfolios</a><a class="level-2" href="#gips-performance-history">Performance History</a>
+      </div></div>
+      <div class="toc-group" data-toc-group><div class="toc-group-row"><a href="#effective-spread">交易策略与执行</a><button class="toc-group-toggle" type="button" aria-expanded="false" aria-controls="toc-trading" aria-label="展开交易目录"><span aria-hidden="true">▶</span></button></div><div class="toc-children" id="toc-trading" hidden>
+        <a class="level-2" href="#effective-spread">Effective Spread</a><a class="level-2" href="#market-manipulation">市场操纵行为辨析</a>
+      </div></div>
     </nav>
   </aside>
 
   <main class="page-content" id="top">
   <h1>CFA Level III Knowledge Notes</h1>
+  <p class="scope-note">按 CFA Level III 科目分类。每条笔记只保留“知识点”和“核心公式或结论”，中文用于解释机制，英文保留课程术语与可直接回忆、作答的核心表述。</p>
 
-  <article id="singer-terhaar">
+  <article id="singer-terhaar" data-subject="Asset Allocation">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -293,11 +279,12 @@
         <div class="formula">部分一体化风险溢价：RP<sub>i</sub> = 一体化程度 × RP<sub>i,int</sub> + (1 − 一体化程度) × RP<sub>i,seg</sub></div>
         <div class="formula">预期收益率：E(R<sub>i</sub>) = R<sub>f</sub> + RP<sub>i</sub></div>
         <div>完全一体化使用全球市场 Sharpe ratio；完全分割使用本地市场 Sharpe ratio。</div>
+        <p class="english-recall">Under full integration, only the market's covariance with the global market is priced; under segmentation, the market's total risk is priced.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="goals-discount-rate">
+  <article id="goals-discount-rate" data-subject="Asset Allocation">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -308,11 +295,12 @@
       <dt>核心公式或结论</dt>
       <dd>
         <div>当目标成功概率高于50%时，相关折现率应低于组合预期收益率。成功概率要求越高，折现率越低，当前所需资金越多。</div>
+        <p class="english-recall">A higher required probability of success implies a lower goal discount rate and a higher current funding requirement.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="asset-class-specification">
+  <article id="asset-class-specification" data-subject="Asset Allocation">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -326,11 +314,12 @@
         <div>类别之间：mutually exclusive，并具有 diversification benefits。</div>
         <div>类别整体：覆盖主要 investable wealth；单个类别具有足够的 capacity and liquidity。</div>
         <div>投资者的风险承受能力和流动性需求影响各类别的配置权重，不是资产类别本身的划分标准。</div>
+        <p class="english-recall">Asset classes should be internally homogeneous, mutually exclusive, diversifying, and collectively representative of the investable opportunity set.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="private-wealth-definitions">
+  <article id="private-wealth-definitions" data-subject="Private Wealth Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -348,11 +337,12 @@
         <div class="formula">Total economic liabilities = Explicit debt + PV of future consumption + Bequest goals + Other economic liabilities</div>
         <div>Primary residence → Real wealth；未来劳动收入现值 → Human capital；两者均不属于financial wealth。</div>
         <div>总经济资产与经济盈余相同 → 总经济负债相同；显性债务越高 → 在其他条件不变时，未来消费与遗赠等隐含负债越低。</div>
+        <p class="english-recall">Economic net worth includes financial wealth, real wealth, and human capital, net of both explicit and implicit liabilities.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="institutional-investment-models">
+  <article id="institutional-investment-models" data-subject="Institutional Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -365,11 +355,12 @@
         <div><strong>Endowment：</strong>另类资产多 + 高度主动管理 + 依赖外部管理人。</div>
         <div><strong>Canada：</strong>private markets较多 + 强大内部团队 + direct/co-investment + 较低外部费用。</div>
         <div><strong>Norway：</strong>公开市场为主 + 广泛分散 + 透明、低成本 + 相对基准化。</div>
+        <p class="english-recall">The endowment model relies heavily on alternatives and external active managers; the Canada model emphasizes internal direct investing; the Norway model emphasizes public markets, diversification, transparency, and low cost.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="bank-equity-duration">
+  <article id="bank-equity-duration" data-subject="Portfolio Construction & Risk Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -386,11 +377,12 @@
         <div>若Δy<sub>L</sub> = bΔy<sub>A</sub>，则：</div>
         <div class="formula">ΔE/E ≈ −[D<sub>A</sub> − b(L/A)D<sub>L</sub>]Δy<sub>A</sub> / (E/A)</div>
         <div><strong>方向：</strong>利率上升时，若资产端duration exposure大于经利率变动比例调整后的负债端exposure，权益资本价值下降。</div>
+        <p class="english-recall">The percentage change in equity equals the asset value change minus the liability value change, scaled by the equity capital ratio.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="pension-abo-pbo">
+  <article id="pension-abo-pbo" data-subject="Institutional Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -409,11 +401,12 @@
         <div class="formula">L<sub>1</sub> ≈ L<sub>0</sub>(1 − D<sub>L</sub>Δy)</div>
         <div class="formula">Pension surplus = Updated assets − Updated pension liabilities</div>
         <div>若负债duration高于资产duration：利率上升通常使负债下降更多、surplus增加；利率下降通常使负债上升更多、surplus减少。</div>
+        <p class="english-recall">PBO includes expected future salary growth, whereas ABO is based on current salary levels.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="quantitative-vs-fundamental">
+  <article id="quantitative-vs-fundamental" data-subject="Equity Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -429,11 +422,12 @@
         <div><strong>Quantitative：</strong>核心是系统化模型统一产生预测和权重；可以大量使用公司基本面变量，并通常在portfolio level控制风险。</div>
         <div><strong>Hybrid：</strong>量化筛选或建模 + 基本面研究与判断 + 系统化组合优化。</div>
         <div>使用基本面数据不必然是Fundamental；使用回归或计算机不必然是Quantitative或Passive。分类取决于最终投资决策的形成机制。</div>
+        <p class="english-recall">The distinction is the decision process: fundamental strategies rely primarily on analyst judgment, whereas quantitative strategies apply systematic, repeatable models across many securities.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="active-management-two-dimensions">
+  <article id="active-management-two-dimensions" data-subject="Equity Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -450,11 +444,12 @@
         <div><strong>Systematic top-down：</strong>规则化factor timing、sector rotation或country allocation。</div>
         <div><strong>Discretionary bottom-up：</strong>深入公司研究、基本面选股、较常见集中高信念组合。</div>
         <div><strong>Discretionary top-down：</strong>依据宏观观点主动配置国家、行业或风格。</div>
+        <p class="english-recall">Systematic versus discretionary describes how decisions are made; bottom-up versus top-down describes where the analysis begins.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="index-vs-active-factor">
+  <article id="index-vs-active-factor" data-subject="Equity Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -469,11 +464,12 @@
         <div><strong>Active factor：</strong>持续选择、调整或择时因子暴露 + 主动承担相对宽基基准的tracking risk + 寻求alpha。</div>
         <div><strong>Systematic ≠ Passive：</strong>判断标准不是是否自动交易，而是“复制既定指数”还是“根据投资观点主动偏离基准”。</div>
         <div>Factor说明“投资什么风险来源”；Index-Based或Active说明“如何实施和管理”。</div>
+        <p class="english-recall">A factor strategy can be index based or active: the factor defines the exposure, while the mandate defines how that exposure is implemented and managed.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="long-short-vs-long-only">
+  <article id="long-short-vs-long-only" data-subject="Equity Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -490,11 +486,12 @@
         <div class="formula">130% Long − 30% Short = 100% Long-only core + (30% Long − 30% Short overlay)</div>
         <div class="formula">Systematic exposure ≈ β<sub>L</sub>w<sub>L</sub> − β<sub>S</sub>w<sub>S</sub></div>
         <div><strong>关键：</strong>dollar neutral不一定等于beta neutral；多空名义金额相同但beta不同，市场风险仍不会完全抵消。</div>
+        <p class="english-recall">A long–short portfolio profits when the long positions outperform the short positions; it does not require both sides to generate positive standalone returns.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="risk-contribution">
+  <article id="risk-contribution" data-subject="Portfolio Construction & Risk Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -508,11 +505,12 @@
         <div class="formula">ACTR<sub>i</sub> = w<sub>i</sub> × MCTR<sub>i</sub></div>
         <div class="formula">Σ ACTR<sub>i</sub> = σ<sub>P</sub></div>
         <div class="formula">Relative Risk Contribution<sub>i</sub> = ACTR<sub>i</sub>/σ<sub>P</sub></div>
+        <p class="english-recall">Marginal contribution to total risk is the change in portfolio risk from a small change in an asset's weight; absolute contribution equals weight times marginal contribution.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="tax-treatment">
+  <article id="tax-treatment" data-subject="Private Wealth Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -524,11 +522,12 @@
       <dd>
         <div>在主要税收制度下，通常适用税率由高到低为：利息收入 &gt; 股息收入 &gt; 长期资本利得。</div>
         <div>长期资本利得通常还具有递延纳税优势。</div>
+        <p class="english-recall">Tax rates are generally highest on interest income, lower on dividend income, and lowest on long-term capital gains, which may also benefit from tax deferral.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="sma-vs-pooled-vehicle">
+  <article id="sma-vs-pooled-vehicle" data-subject="Private Wealth Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -542,11 +541,12 @@
         <div>应税账户＋大额未实现利得／特殊税基 → SMA通常更合适：可保留高嵌入利得头寸、控制利得实现并进行tax-loss harvesting。</div>
         <div>非应税账户 → 未实现利得没有当期税务影响；若无其他定制需求，pooled vehicle通常更具成本与分散化优势。</div>
         <div>Pooled vehicle不能围绕单个投资者的tax basis定制交易，并可能向应税投资者分配基金层面的已实现资本利得。</div>
+        <p class="english-recall">An SMA is more suitable when investor-specific tax management is valuable; a pooled vehicle generally offers greater economies of scale but less customization.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="currency-risk-premium">
+  <article id="currency-risk-premium" data-subject="Asset Allocation">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -561,11 +561,12 @@
         <div>其他条件不变：某货币计价资产的 required risk premium ↑ → 该货币趋于贬值。</div>
         <div class="formula"><em>S</em><sub>P/B</sub> = 每 1 单位 base currency（B）对应的 price currency（P）数量</div>
         <div>Base currency 升值 → <em>S</em><sub>P/B</sub> 上升；price currency 升值 → <em>S</em><sub>P/B</sub> 下降。</div>
+        <p class="english-recall">All else equal, a decline in the required risk premium on assets denominated in a currency tends to support appreciation of that currency.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="macro-vs-micro-hedge">
+  <article id="macro-vs-micro-hedge" data-subject="Derivatives & Risk Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -579,11 +580,12 @@
         <div>整个组合＋宏观情景／共同风险因子 → Macro hedge。</div>
         <div>单一头寸／特定现金流＋精确匹配 → Micro hedge。</div>
         <div>判断关键：看被对冲风险的覆盖范围，不看交易规模、货币数量或交易场所。</div>
+        <p class="english-recall">A macro hedge addresses a common risk affecting the entire portfolio, whereas a micro hedge targets a specific position, liability, or cash flow.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="macro-vs-micro-attribution">
+  <article id="macro-vs-micro-attribution" data-subject="Performance Measurement">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -600,11 +602,12 @@
         <div>总基金／资产类别层级 → Macro；单个管理人账户层级 → Micro。</div>
         <div>选择管理人 → Macro decision；管理人选择证券 → Micro decision。</div>
         <div>Macro不只分析资产配置；Micro也不只分析单只证券。</div>
+        <p class="english-recall">Macro attribution evaluates the asset owner's policy and manager-allocation decisions; micro attribution evaluates the portfolio manager's decisions within a mandate.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="brinson-attribution-models">
+  <article id="brinson-attribution-models" data-subject="Performance Measurement">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -623,11 +626,12 @@
         <div class="formula">Interaction：I<sub>i</sub> = (w<sub>P,i</sub> − w<sub>B,i</sub>) × (r<sub>P,i</sub> − r<sub>B,i</sub>)</div>
         <div>BHB看“active weight × 行业自身收益”；BF看“active weight × 行业相对整体基准收益”。</div>
         <div>Selection衡量行业内部证券选择；interaction衡量主动权重与行业内部超额收益的共同作用。</div>
+        <p class="english-recall">Brinson–Fachler evaluates allocation relative to the total benchmark return, whereas BHB uses each sector's benchmark return directly.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="benchmark-misfit-return">
+  <article id="benchmark-misfit-return" data-subject="Performance Measurement">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -645,11 +649,12 @@
         <div class="formula">R<sub>P</sub> − R<sub>B</sub> = (R<sub>P</sub> − R<sub>N</sub>) + (R<sub>N</sub> − R<sub>B</sub>)</div>
         <div>其中R<sub>P</sub>为实际组合收益，R<sub>N</sub>为manager’s normal portfolio收益，R<sub>B</sub>为broad market benchmark收益。</div>
         <div>Actual portfolio − Normal portfolio → 经理主动管理收益；Normal portfolio − Broad benchmark → Misfit active return。</div>
+        <p class="english-recall">Misfit active return is the return of the manager's normal portfolio minus the return of the broad market benchmark.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="manager-selection-errors">
+  <article id="manager-selection-errors" data-subject="Performance Measurement">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -664,12 +669,12 @@
         <div><strong>Type II：</strong>do not hire／fire a skilled manager（false negative）。</div>
         <div>Skilled managers占比较大＋平均收益明显更高 → 更容易识别skilled manager。</div>
         <div>Dispersion相对均值差距较小 → 分布重叠较少 → 两类误判更少。</div>
-        <div><strong>最短答题句：</strong>The return distributions should have low dispersion relative to the difference in their means, resulting in less overlap and fewer Type I and Type II errors.</div>
+        <p class="english-recall">The return distributions should have low dispersion relative to the difference in their means, resulting in less overlap and fewer Type I and Type II errors.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="gips-seed-portfolios">
+  <article id="gips-seed-portfolios" data-subject="GIPS">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -681,11 +686,12 @@
       <dd>
         <div>符合定义的seed money portfolio可以从inception起纳入适当composite，但并非因为是non-fee-paying portfolio就必须纳入。</div>
         <div>一旦纳入，必须与fee-paying portfolios适用相同的composite政策和程序，并遵守适用的non-fee-paying portfolio披露与报告要求。</div>
+        <p class="english-recall">An actual, discretionary seed-money portfolio may be included in the appropriate composite from inception, subject to the requirements for non-fee-paying portfolios.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="gips-terminated-portfolios">
+  <article id="gips-terminated-portfolios" data-subject="GIPS">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -697,11 +703,12 @@
       <dd>
         <div>纳入截止日 = 公司仍拥有discretion的last full measurement period期末。</div>
         <div>按月计算composite＋月中失去discretion → 该月不纳入，保留至上一个月末。</div>
+        <p class="english-recall">A terminated portfolio remains in the composite through the last full measurement period in which the firm had investment discretion.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="gips-performance-history">
+  <article id="gips-performance-history" data-subject="GIPS">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -713,11 +720,12 @@
       <dd>
         <div>初次展示：至少5年；成立不足5年：展示since inception。</div>
         <div>之后逐年增加，直到至少10年；已有10年以上历史时，最低展示要求仍为10年。</div>
+        <p class="english-recall">A firm initially presents at least five years of compliant performance, or since inception if shorter, and adds annual performance until at least ten years are presented.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="modified-dietz-return">
+  <article id="modified-dietz-return" data-subject="Performance Measurement">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -733,11 +741,12 @@
         <div class="formula">w<sub>i</sub> = 现金流发生后剩余投资天数 / 计量期间总天数</div>
         <div>End-of-day现金流当天不参与投资，从下一天开始计算剩余投资天数；外部流入为正CF，外部流出为负CF。</div>
         <div>Modified Dietz：线性加权、直接计算；Modified IRR／IRR Method：复利关系、迭代求解。</div>
+        <p class="english-recall">Modified Dietz linearly weights external cash flows by the time invested; the IRR method solves a compound-return equation iteratively.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="private-equity-irr-moic">
+  <article id="private-equity-irr-moic" data-subject="Performance Measurement">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -750,11 +759,12 @@
         <div class="formula">MOIC =（底层投资当前价值 + 累计分配）/ Total invested capital</div>
         <div>资本返还过快 → IRR可能因短持有期而虚高 → 更重视MOIC，检查实际财富倍数。</div>
         <div>资本返还过慢 → MOIC忽略资本长期占用的时间成本 → 更重视IRR。</div>
+        <p class="english-recall">When capital is returned unusually quickly, place greater weight on MOIC; when capital is returned more slowly than expected, place greater weight on IRR.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="private-equity-nav-forecast">
+  <article id="private-equity-nav-forecast" data-subject="Performance Measurement">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -767,11 +777,12 @@
         <div class="formula">Ending NAV = Beginning NAV × (1 + Expected growth rate) + Expected contributions − Expected distributions</div>
         <div class="formula">Unfunded commitment = Total commitment − Contributed capital to date</div>
         <div>Unfunded commitment是未来可能被调用的剩余承诺，不等于下一期预计capital call；若题目给出expected contribution，应使用该数额。</div>
+        <p class="english-recall">Ending NAV equals beginning NAV grown at the expected rate, plus expected contributions, less expected distributions.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="cross-currency-basis-swap">
+  <article id="cross-currency-basis-swap" data-subject="Derivatives & Risk Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -790,11 +801,12 @@
         <div class="formula">互换美元腿支付 = N<sub>USD</sub> × r<sub>USD</sub>/m</div>
         <div>半年结算时m = 2。若b &gt; s，非美元端为净收款；若b &lt; s，非美元端为净付款。</div>
         <div><strong>考场检查顺序：</strong>先判断每条腿的收付方向 → 将basis加到非美元reference rate → 与原贷款现金流合并 → 最后按结算频率折算。</div>
+        <p class="english-recall">Under the common USD quotation convention, the cross-currency basis is added to the non-USD reference-rate leg.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="non-deliverable-forward">
+  <article id="non-deliverable-forward" data-subject="Derivatives & Risk Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -819,11 +831,12 @@
         <div>Long foreign-currency asset的对冲方向：sell foreign currency forward / buy base currency forward。</div>
         <div>NDF仍存在basis risk、fixing risk、counterparty risk以及rollover/liquidity risk。</div>
         <div>结算公式取决于汇率报价方向、notional currency、交易方向和settlement currency；必须先确认“一单位哪种货币对应多少单位哪种货币”，不能脱离单位死记公式。</div>
+        <p class="english-recall">An NDF does not deliver the restricted currency; it settles only the net cash difference in a freely convertible currency.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="credit-spread-measures">
+  <article id="credit-spread-measures" data-subject="Fixed-Income Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -854,11 +867,12 @@
         <div><strong>利差合理、信用曲线稳定且通常向上倾斜：</strong>增加较长期限、相近评级的信用债敞口，主要赚取较高carry与credit curve rolldown。</div>
         <div><strong>预计利差收窄：</strong>可增加信用风险或spread duration；<strong>预计利差扩大：</strong>可降低信用风险、提高信用质量或买入CDS protection。</div>
         <div><strong>CDS方向：</strong>买入信用保护需要持续支付premium，主要在利差扩大或发生信用事件时受益，并非稳定利差环境下赚取carry的首选。</div>
+        <p class="english-recall">OAS provides a consistent basis for comparing option-free bonds and securities with embedded options, but it remains model dependent.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="business-cycle-market-signals">
+  <article id="business-cycle-market-signals" data-subject="Asset Allocation">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -879,11 +893,12 @@
         <div><strong>Slowdown：</strong>增长减速；短期利率见顶后下降；yield curve steepens；credit spreads widen。</div>
         <div><strong>Contraction：</strong>产出下降；失业上升；通胀与利率下降；政府债券相对受益；信用利差较宽。</div>
         <div><strong>判断顺序：</strong>先看增长方向与产出缺口，再用通胀、政策、收益率曲线和信用利差交叉确认；金融市场通常领先实体经济。</div>
+        <p class="english-recall">Business-cycle identification requires multiple confirming indicators because financial markets are forward looking and often turn before the reported economy.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="forecasting-unusual-environments">
+  <article id="forecasting-unusual-environments" data-subject="Asset Allocation">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -899,11 +914,12 @@
         <div><strong>历史均值：</strong>当前环境越偏离历史常态，历史平均值的预测可靠性越低。</div>
         <div><strong>统计模型：</strong>当当前环境不同于模型的估计或校准环境时，模型关系可能变得不稳定，而不是自动保持稳定。</div>
         <div><strong>应对方法：</strong>经济逻辑与定性判断 + scenario analysis + stress testing + 明确模型假设和适用边界。</div>
+        <p class="english-recall">Quantitative models may be unstable when current conditions differ materially from the environment in which the models were estimated or calibrated.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="credit-cycle-positioning">
+  <article id="credit-cycle-positioning" data-subject="Fixed-Income Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -918,11 +934,12 @@
         <div><strong>低评级或distressed发行人：</strong>近期违约风险可能主导 → 信用曲线更容易flatten或invert。</div>
         <div><strong>增长周期接近尾声：</strong>买入相同tenor的HY protection＋卖出IG protection。</div>
         <div><strong>区分：</strong>同一发行人或指数、不同tenor → 信用曲线交易；不同评级、相同tenor → 信用质量相对交易。</div>
+        <p class="english-recall">At the end of a growth cycle, high-yield spreads are generally more vulnerable than investment-grade spreads.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="credit-expected-excess-return">
+  <article id="credit-expected-excess-return" data-subject="Fixed-Income Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -940,11 +957,12 @@
         <div class="formula">LGD = 1 − Recovery rate；h = holding period in years</div>
         <div><strong>符号：</strong>ΔOAS &lt; 0（利差收窄）→ −Spread Duration × ΔOAS &gt; 0（价格收益）；ΔOAS &gt; 0（利差扩大）→ 价格损失。</div>
         <div><strong>排错：</strong>比较信用类别时不能只看OAS；各项必须使用一致单位。不要把题目已经给定的持有期spread change再次乘以h。</div>
+        <p class="english-recall">For a holding period shorter than one year, scale annualized carry and expected loss by the holding-period fraction, but do not rescale a spread change already stated for that holding period.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="credit-index-downside-hedge">
+  <article id="credit-index-downside-hedge" data-subject="Fixed-Income Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -957,11 +975,12 @@
         <div><strong>买入指数保护：</strong>系统性信用风险下降，但premium和展期成本会侵蚀excess spread。</div>
         <div><strong>困境市场：</strong>利差、波动率及保护需求通常上升，临时建立对冲往往更昂贵，而不是更便宜。</div>
         <div><strong>排错：</strong>指数对冲不等于降低底层持仓集中度。</div>
+        <p class="english-recall">Buying index protection reduces systematic credit exposure but lowers the portfolio's excess spread through the protection premium and roll cost.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="cds-standard-coupon-upfront">
+  <article id="cds-standard-coupon-upfront" data-subject="Fixed-Income Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -977,11 +996,12 @@
         <div><strong>Market spread &lt; standard coupon：</strong>保护卖方支付upfront。</div>
         <div><strong>常见standard coupon：</strong>investment-grade CDS通常为1%，high-yield CDS通常为5%。</div>
         <div><strong>易错点：</strong>不要把持续coupon的收取方向与期初upfront的收付方向混淆。</div>
+        <p class="english-recall">When the market CDS spread is below the standard coupon, the protection seller pays an upfront amount because the contractual coupon is above market.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="cds-credit-curve-trades">
+  <article id="cds-credit-curve-trades" data-subject="Fixed-Income Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -1001,11 +1021,12 @@
         <div><strong>易错点：</strong>配平的是effective spread duration，不是普通利率duration；duration-neutral也不代表两腿notional相同。</div>
         <div><strong>识别：</strong>同一发行人或指数、不同tenor，并同时操作两端 → 信用曲线斜率交易。</div>
         <div><strong>排错：</strong>只做单腿会混入整体信用利差方向风险，不能干净地隔离曲线斜率。</div>
+        <p class="english-recall">A duration-neutral curve trade equates notional times effective spread duration across the short- and long-tenor legs.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="structured-credit-positioning">
+  <article id="structured-credit-positioning" data-subject="Fixed-Income Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -1022,11 +1043,12 @@
         <div><strong>短期利率上升：</strong>CLO因浮动利率贷款占主导，通常比以固定利率信用资产为主的CDO更受益。</div>
         <div><strong>经济下行：</strong>增持senior / higher-rated tranches，减持lower-rated / subordinated tranches。</div>
         <div><strong>经济改善：</strong>lower-rated tranches可能因信用损失下降而获得更高回报。</div>
+        <p class="english-recall">CLO tranches generally benefit more from rising short-term rates than CDO tranches because CLO assets are predominantly floating-rate leveraged loans.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="futures-asset-rebalancing">
+  <article id="futures-asset-rebalancing" data-subject="Portfolio Construction & Risk Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -1048,11 +1070,12 @@
         <div class="formula">每份债券期货BPV = BPV<sub>CTD</sub> / CF</div>
         <div class="formula">债券期货合约数 N<sub>B</sub> = 目标BPV / 每份债券期货BPV</div>
         <div><strong>方向：</strong>N为正表示买入期货，N为负表示卖出期货。增加股票或债券敞口时买入相应期货；减少敞口时卖出。</div>
+        <p class="english-recall">Equity futures are matched by beta exposure; bond futures are matched by BPV, with the futures BPV based on the CTD bond and its conversion factor.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="portfolio-vs-dollar-krd">
+  <article id="portfolio-vs-dollar-krd" data-subject="Portfolio Construction & Risk Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -1068,11 +1091,12 @@
         <div class="formula">Active KRD<sub>i</sub> = Portfolio KRD<sub>i</sub> − Benchmark KRD<sub>i</sub></div>
         <div class="formula">Σ KRD<sub>i</sub> ≈ Portfolio duration</div>
         <div>跨组合比较百分比利率敏感度 → 使用Portfolio KRD并先按各自总市值标准化；比较货币金额敏感度 → 使用Dollar KRD。</div>
+        <p class="english-recall">Portfolio KRD is a percentage sensitivity normalized by portfolio value; dollar KRD is the corresponding monetary sensitivity.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="bond-rolldown-return">
+  <article id="bond-rolldown-return" data-subject="Fixed-Income Portfolio Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -1090,11 +1114,12 @@
         <div class="formula">1 + R<sub>base</sub> = (1 + R<sub>local bond</sub>)(1 + R<sub>currency</sub>)</div>
         <div><strong>计算顺序：</strong>稳定曲线下的期末价格与rolldown → duration/convexity调整收益率观点 → 加coupon → 加汇率回报。</div>
         <div><strong>判断：</strong>预期利率波动率上升时偏好高正凸性；比较特定持有期的预期总收益时，必须同时比较rolldown、duration、convexity、coupon和currency effects。</div>
+        <p class="english-recall">Rolldown return is the price return generated as a bond ages along an unchanged yield curve; it is not a forecast of a curve shift.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="portfolio-overlays">
+  <article id="portfolio-overlays" data-subject="Portfolio Construction & Risk Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -1108,11 +1133,12 @@
         <div><strong>Rebalancing overlay：</strong>实际asset-class weights偏离战略或policy weights。</div>
         <div><strong>Cash equitization：</strong>暂时性现金造成cash drag，需要用股指期货等获得市场敞口。</div>
         <div>若大量现金已使组合整体风险属性显著偏离基准，应优先从completion overlay角度处理；若仅是暂时性现金敞口不足，则使用cash equitization。</div>
+        <p class="english-recall">A completion overlay corrects benchmark risk exposures, a rebalancing overlay restores policy weights, and cash equitization removes cash drag.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="effective-spread">
+  <article id="effective-spread" data-subject="Trading Strategy & Execution">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -1125,11 +1151,12 @@
         <div class="formula">Effective spread<sub>i</sub> = 2 × |Execution price<sub>i</sub> − Midquote<sub>i</sub>|</div>
         <div class="formula">Weighted average effective spread = Σ(Shares<sub>i</sub> × Effective spread<sub>i</sub>) / ΣShares<sub>i</sub></div>
         <div><strong>易错点：</strong>|Execution price − Midquote|只是half-spread；effective spread必须再乘以2。</div>
+        <p class="english-recall">Effective spread is twice the absolute difference between the execution price and the prevailing midquote.</p>
       </dd>
     </dl>
   </article>
 
-  <article id="market-manipulation">
+  <article id="market-manipulation" data-subject="Trading Strategy & Execution">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -1142,11 +1169,12 @@
         <div><strong>Wash trading：</strong>关联账户互相成交 → 虚假成交量或活跃度 → 实质受益所有权不变。</div>
         <div><strong>Spoofing：</strong>无意成交的虚假挂单 → 诱导市场反应 → 成交前撤单。</div>
         <div><strong>Trading for market impact：</strong>进行真实交易 → 故意推动或影响价格。</div>
+        <p class="english-recall">Layering or spoofing uses non-bona-fide orders that are intended to be canceled; wash trading uses offsetting trades under common control to create false activity.</p>
       </dd>
     </dl>
   </article>
 
-  <article class="option-guide" id="option-strategies">
+  <article class="option-guide" id="option-strategies" data-subject="Derivatives & Risk Management">
     <dl>
       <dt>知识点</dt>
       <dd>
@@ -1310,6 +1338,7 @@
           <div class="formula">Long straddle profit = |S<sub>T</sub> − K| − D</div>
           <div class="formula">Collar profit = S<sub>T</sub> − S<sub>0</sub> + max(K<sub>P</sub> − S<sub>T</sub>, 0) − max(S<sub>T</sub> − K<sub>C</sub>, 0) − P + C</div>
         </div>
+        <p class="english-recall">Select an option strategy by matching the investor's directional view, volatility view, desired downside protection, acceptable upside sacrifice, and premium budget.</p>
       </dd>
     </dl>
   </article>
